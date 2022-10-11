@@ -7,6 +7,7 @@ draft: false
 tags:
 - mumbai
 title: Comedian
+summary: "This is all about comedian scripts for a movie"
 ---
 
 # This is comedian page

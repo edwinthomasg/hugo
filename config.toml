@@ -2,9 +2,9 @@ baseURL = ""
 languageCode = "en-us"
 title = "New Site"
 archetypeDir = "arch"
-contentDir = "leaf-bundle"
 theme = "PaperMod"
-[taxonomies]
-    tag = "tags"
-    category = "categories"
-    place = "places"
+[privacy]
+    [youtube]
+     disable = true
+
+

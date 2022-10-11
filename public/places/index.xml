@@ -2,9 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Places on New Site</title>
-    <link>/places/</link>
+    <link>https://ar.al/places/</link>
     <description>Recent content in Places on New Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/places/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 19:42:12 +0530</lastBuildDate><atom:link href="https://ar.al/places/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>erode</title>
+      <link>https://ar.al/places/erode/</link>
+      <pubDate>Sun, 09 Oct 2022 19:42:12 +0530</pubDate>
+      
+      <guid>https://ar.al/places/erode/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

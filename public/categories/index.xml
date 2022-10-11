@@ -2,9 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on New Site</title>
-    <link>/categories/</link>
+    <link>https://ar.al/categories/</link>
     <description>Recent content in Categories on New Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 19:49:36 +0530</lastBuildDate><atom:link href="https://ar.al/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>horror</title>
+      <link>https://ar.al/categories/horror/</link>
+      <pubDate>Sun, 09 Oct 2022 19:49:36 +0530</pubDate>
+      
+      <guid>https://ar.al/categories/horror/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thriller</title>
+      <link>https://ar.al/categories/thriller/</link>
+      <pubDate>Sun, 09 Oct 2022 19:42:14 +0530</pubDate>
+      
+      <guid>https://ar.al/categories/thriller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cat1</title>
+      <link>https://ar.al/categories/cat1/</link>
+      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/categories/cat1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cat2</title>
+      <link>https://ar.al/categories/cat2/</link>
+      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/categories/cat2/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

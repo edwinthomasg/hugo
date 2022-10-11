@@ -2,9 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on New Site</title>
-    <link>/tags/</link>
+    <link>https://ar.al/tags/</link>
     <description>Recent content in Tags on New Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 19:49:36 +0530</lastBuildDate><atom:link href="https://ar.al/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mumbai</title>
+      <link>https://ar.al/tags/mumbai/</link>
+      <pubDate>Sun, 09 Oct 2022 19:49:36 +0530</pubDate>
+      
+      <guid>https://ar.al/tags/mumbai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chennai</title>
+      <link>https://ar.al/tags/chennai/</link>
+      <pubDate>Sun, 09 Oct 2022 19:42:14 +0530</pubDate>
+      
+      <guid>https://ar.al/tags/chennai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag1</title>
+      <link>https://ar.al/tags/tag1/</link>
+      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/tags/tag1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag2</title>
+      <link>https://ar.al/tags/tag2/</link>
+      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/tags/tag2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag3</title>
+      <link>https://ar.al/tags/tag3/</link>
+      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/tags/tag3/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

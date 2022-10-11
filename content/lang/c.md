@@ -10,4 +10,4 @@ tags:
 title: C Language
 ---
 
-# C Programming
+C Programming

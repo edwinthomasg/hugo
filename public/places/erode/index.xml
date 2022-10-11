@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>erode on New Site</title>
+    <link>https://ar.al/places/erode/</link>
+    <description>Recent content in erode on New Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 19:42:12 +0530</lastBuildDate><atom:link href="https://ar.al/places/erode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Actor</title>
+      <link>https://ar.al/movie/actor/</link>
+      <pubDate>Sun, 09 Oct 2022 19:42:12 +0530</pubDate>
+      
+      <guid>https://ar.al/movie/actor/</guid>
+      <description>This is actor page</description>
+    </item>
+    
+  </channel>
+</rss>

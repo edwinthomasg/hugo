@@ -3,19 +3,138 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://ar.al/book/</loc>
+    <lastmod>2022-10-10T11:48:39+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://ar.al/book/books/</loc>
+    <lastmod>2022-10-10T11:48:39+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/places/</loc>
+    <loc>https://ar.al/</loc>
+    <lastmod>2022-10-09T22:30:00+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://ar.al/tester/</loc>
+    <lastmod>2022-10-09T22:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/lang/</loc>
+    <lastmod>2022-10-09T22:18:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/movie/</loc>
+    <lastmod>2022-10-09T21:58:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/movie/director/</loc>
+    <lastmod>2022-10-09T19:54:19+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/categories/</loc>
+    <lastmod>2022-10-09T19:49:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/movie/comedian/</loc>
+    <lastmod>2022-10-09T19:49:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/categories/horror/</loc>
+    <lastmod>2022-10-09T19:49:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/tags/mumbai/</loc>
+    <lastmod>2022-10-09T19:49:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/tags/</loc>
+    <lastmod>2022-10-09T19:49:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/movie/actress/</loc>
+    <lastmod>2022-10-09T19:42:14+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/tags/chennai/</loc>
+    <lastmod>2022-10-09T19:42:14+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/categories/thriller/</loc>
+    <lastmod>2022-10-09T19:42:14+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/movie/actor/</loc>
+    <lastmod>2022-10-09T19:42:12+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/places/erode/</loc>
+    <lastmod>2022-10-09T19:42:12+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/places/</loc>
+    <lastmod>2022-10-09T19:42:12+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/categories/cat1/</loc>
+    <lastmod>2022-10-09T19:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/categories/cat2/</loc>
+    <lastmod>2022-10-09T19:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/lang/python/</loc>
+    <lastmod>2022-10-09T19:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/tags/tag1/</loc>
+    <lastmod>2022-10-09T19:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/tags/tag2/</loc>
+    <lastmod>2022-10-09T19:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/tags/tag3/</loc>
+    <lastmod>2022-10-09T19:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/dev/</loc>
+    <lastmod>2022-10-07T15:46:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/lang/c/</loc>
+    <lastmod>2022-10-07T12:48:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ar.al/lang/java/</loc>
+    <lastmod>2022-10-07T12:48:13+05:30</lastmod>
   </url>
   
 </urlset>

@@ -2,9 +2,100 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>New Site</title>
-    <link>/</link>
+    <link>https://ar.al/</link>
     <description>Recent content on New Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2022 22:30:00 +0530</lastBuildDate><atom:link href="https://ar.al/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Books</title>
+      <link>https://ar.al/book/books/</link>
+      <pubDate>Mon, 10 Oct 2022 11:48:39 +0530</pubDate>
+      
+      <guid>https://ar.al/book/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tester</title>
+      <link>https://ar.al/tester/</link>
+      <pubDate>Sun, 09 Oct 2022 22:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/tester/</guid>
+      <description>This is testing team</description>
+    </item>
+    
+    <item>
+      <title>Director</title>
+      <link>https://ar.al/movie/director/</link>
+      <pubDate>Sun, 09 Oct 2022 19:54:19 +0530</pubDate>
+      
+      <guid>https://ar.al/movie/director/</guid>
+      <description>This is director page </description>
+    </item>
+    
+    <item>
+      <title>Comedian</title>
+      <link>https://ar.al/movie/comedian/</link>
+      <pubDate>Sun, 09 Oct 2022 19:49:36 +0530</pubDate>
+      
+      <guid>https://ar.al/movie/comedian/</guid>
+      <description>This is all about comedian scripts for a movie</description>
+    </item>
+    
+    <item>
+      <title>Actress</title>
+      <link>https://ar.al/movie/actress/</link>
+      <pubDate>Sun, 09 Oct 2022 19:42:14 +0530</pubDate>
+      
+      <guid>https://ar.al/movie/actress/</guid>
+      <description>This is actress page</description>
+    </item>
+    
+    <item>
+      <title>Actor</title>
+      <link>https://ar.al/movie/actor/</link>
+      <pubDate>Sun, 09 Oct 2022 19:42:12 +0530</pubDate>
+      
+      <guid>https://ar.al/movie/actor/</guid>
+      <description>This is actor page</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://ar.al/lang/python/</link>
+      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
+      
+      <guid>https://ar.al/lang/python/</guid>
+      <description>Python Lang Heading </description>
+    </item>
+    
+    <item>
+      <title>Dev</title>
+      <link>https://ar.al/dev/</link>
+      <pubDate>Fri, 07 Oct 2022 15:46:08 +0530</pubDate>
+      
+      <guid>https://ar.al/dev/</guid>
+      <description>This is developer team.</description>
+    </item>
+    
+    <item>
+      <title>C Language</title>
+      <link>https://ar.al/lang/c/</link>
+      <pubDate>Fri, 07 Oct 2022 12:48:13 +0530</pubDate>
+      
+      <guid>https://ar.al/lang/c/</guid>
+      <description>C Programming </description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://ar.al/lang/java/</link>
+      <pubDate>Fri, 07 Oct 2022 12:48:13 +0530</pubDate>
+      
+      <guid>https://ar.al/lang/java/</guid>
+      <description>Java Programming </description>
+    </item>
+    
   </channel>
 </rss>
