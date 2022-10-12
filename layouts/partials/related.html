@@ -1,0 +1,12 @@
+<header>
+    <h2>PARTIAL HEADER</h2>
+</header>
+<hr>
+{{ $related := .Site.RegularPages.Related . }}
+{{ $related }}
+{{ $page := .Resources.ByType "image"}}
+{{ range $related }}
+ <p> {{.Title}}</p>
+{{ end }}
+
+<hr>

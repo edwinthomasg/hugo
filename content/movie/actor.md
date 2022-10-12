@@ -7,12 +7,13 @@ date: "2022-10-09T19:42:12+05:30"
 draft: false
 places:
 - erode
-tags:
-- mumbai
-- chennai
+tags: ["filmify"]
 title: Actor
 movie: 
  running days: 100
+keywords:
+ - programming
+ - coding
 ---
 This is actor page
 
@@ -20,6 +21,6 @@ This is actor page
 **git**
 {{< param "movie.running days" >}}
 [actress]({{< ref "movie/actress.md" >}})
-[dev]({{< relref "dev.md" >}})
+[dev]({{< relref "/dev.md" >}})
 
 {{< vimeo KPvVf-UhT0Q >}}

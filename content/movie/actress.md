@@ -3,10 +3,11 @@ author: gautam
 categories:
 - horror
 - thriller
-date: "2022-10-09T19:42:14+05:30"
+date: "2022-10-09T19:42:12+05:30"
 draft: false
-tags:
-- chennai
+tags: ["filmify"]
 title: Actress
 ---
-This is actress page
+{{< quote colour="red" >}}
+    <p>inner html <b><i>italic text</i></b></p>
+{{< /quote >}}

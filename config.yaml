@@ -1,0 +1,16 @@
+baseURL: ""
+languageCode: "en-us"
+title: "New Site"
+archetypeDir: "arch"
+theme: "PaperMod"
+related:
+  includeNewer: false
+  indices:
+  - name: keywords
+    weight: 100
+  - name: date
+    weight: 10
+  threshold: 80
+  toLower: false
+
+

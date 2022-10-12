@@ -1,24 +1,23 @@
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.68.3" />
 
     </head>
     <body>
         <h1 style="background-color:gainsboro; text-align: center; color: black;">Home Page Layout</h1>
         <h2>Title</h2>
-        New Site
+        {{ .Site.Title }}
         <h2>Name</h2>
-        New Site
+        {{.Name}}
         <h2>Permalink</h2>
-        /
+        {{.Permalink}}
         <h2>Relative Link</h2>
-        /
+        {{.RelPermalink}}
         <h2>Resource Type</h2>
-        page
+        {{.ResourceType}}
         <h2>Media Type</h2>
-        application/octet-stream
+        {{.MediaType}}
         <h2>Media type Main type</h2>
-        application
+        {{.MediaType.MainType}}
         <h2>Youtube</h2>
     </body>
 </html>

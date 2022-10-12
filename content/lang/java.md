@@ -11,3 +11,7 @@ title: Java
 
 # Java Programming
 {{< youtube KPvVf-UhT0Q >}}
+
+## Permalink for the java file  
+[C]({{< ref "lang/c.md" >}})
+[Python]({{< relref "python.md" >}})

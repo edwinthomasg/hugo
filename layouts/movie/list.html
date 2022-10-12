@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    {{ partial "related" . }}
+    <h1 style="color: white; background-color: blue; text-align: center">
+      Movie List
+    </h1>
+    {{range .Pages}}
+    <p>{{.Title}}</p>
+    {{end}} {{with .Resources.ByType "image"}} {{range .}}
+    <p>{{.RelPermalink}}</p>
+    <img src="{{.RelPermalink}}" alt="image not found" />
+    {{end}} {{end}}
+    <h2>Is Section</h2>
+    {{.IsSection}}
+    <h2>Permalink</h2>
+    {{.Permalink}}
+    <h2>Relative Link</h2>
+    {{.RelPermalink}}
+    <h2>Resource Type</h2>
+    {{.ResourceType}}
+    <h2>Media Type</h2>
+    {{.MediaType}}
+    <h2>Media type Main type</h2>
+    {{.MediaType.MainType}}
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    {{ partial "related" . }}
+    <h1 style="text-align: center; background-color: cadetblue; color: white">
+      Single Page Movie Layout
+    </h1>
+    <h2>Site Title</h2>
+    {{ .Site.Title }}
+    <h3>Page Title</h3>
+    {{ .Title }}
+    <h2>Name</h2>
+    {{.Name}}
+    <h3>Summary</h3>
+    {{ if eq .Params.Display true }}
+    <p>{{.Summary}}</p>
+    {{ else }} NO SUMMARY CONTENT FOR THIS PAGE {{end}}
+    <h2>content</h2>
+    {{.Content}}
+    <h2>Current Section</h2>
+    {{.CurrentSection}}
+    <h2>First Section</h2>
+    {{.FirstSection}}
+    <h2>Is Node</h2>
+    {{.IsNode}}
+    <h2>Is Section</h2>
+    {{.IsSection}}
+    <h2>Keywords</h2>
+    {{ range $keyword := .Keywords}}
+     <p>{{$keyword}}</p>
+    {{end}}
+    <h2>Link Title</h2>
+    {{.LinkTitle}}
+    <h2>Footer</h2>
+    <p>This is some random content from movie layout</p>
+    <h2>Variable</h2>
+    {{$myVar := "ajith"}} {{$myVar}}
+    
+  </body>
+</html>

@@ -2,37 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Lang title on New Site</title>
-    <link>https://ar.al/lang/</link>
+    <link>/lang/</link>
     <description>Recent content in Lang title on New Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Oct 2022 22:18:55 +0530</lastBuildDate><atom:link href="https://ar.al/lang/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python</title>
-      <link>https://ar.al/lang/python/</link>
-      <pubDate>Sun, 09 Oct 2022 19:30:00 +0530</pubDate>
-      
-      <guid>https://ar.al/lang/python/</guid>
-      <description>Python Lang Heading </description>
-    </item>
-    
-    <item>
-      <title>C Language</title>
-      <link>https://ar.al/lang/c/</link>
-      <pubDate>Fri, 07 Oct 2022 12:48:13 +0530</pubDate>
-      
-      <guid>https://ar.al/lang/c/</guid>
-      <description>C Programming </description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://ar.al/lang/java/</link>
-      <pubDate>Fri, 07 Oct 2022 12:48:13 +0530</pubDate>
-      
-      <guid>https://ar.al/lang/java/</guid>
-      <description>Java Programming </description>
-    </item>
-    
+    <lastBuildDate>Sun, 09 Oct 2022 22:18:55 +0530</lastBuildDate><atom:link href="/lang/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -6,4 +6,6 @@ title: Director
 aliases: ["/movie/author","/movie/writer"]
 ---
 
-# This is director page
+This is director page
+
+{{< quote colour="red" >}}
