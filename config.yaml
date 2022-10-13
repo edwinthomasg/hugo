@@ -1,8 +1,7 @@
 baseURL: ""
 languageCode: "en-us"
 title: "New Site"
-archetypeDir: "arch"
-theme: "PaperMod"
+theme: ""
 related:
   includeNewer: false
   indices:

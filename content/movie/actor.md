@@ -21,6 +21,6 @@ This is actor page
 **git**
 {{< param "movie.running days" >}}
 [actress]({{< ref "movie/actress.md" >}})
-[dev]({{< relref "/dev.md" >}})
+
 
 {{< vimeo KPvVf-UhT0Q >}}

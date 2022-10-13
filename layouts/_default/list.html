@@ -5,6 +5,8 @@
   </head>
   <body>
     {{ partial "related" . }}
+    <h1>Is Section</h1>
+    {{.IsSection}}
     <h1 style="text-align: center; background-color: brown; color: aliceblue">
       List Page Default
     </h1>
@@ -36,5 +38,14 @@
     {{.MediaType}}
     <h2>Media type Main type</h2>
     {{.MediaType.MainType}}
+    <h2>Section</h2>
+    {{.Section}}
+    <br>
+    {{ range $page := .Sections}}
+     {{$page}}
+    {{ end }}
+    <br>
+    <h2>Parent Section</h2>
+    {{.Parent}}
   </body>
 </html>

@@ -11,7 +11,9 @@ title: Java
 
 # Java Programming
 {{< youtube KPvVf-UhT0Q >}}
-
+[google](https://www.google.com)  
+[youtube][utubeLink]
+[utubeLink]: www.youtube.com
 ## Permalink for the java file  
 [C]({{< ref "lang/c.md" >}})
 [Python]({{< relref "python.md" >}})
