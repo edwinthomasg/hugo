@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Templating</title>
+  </head>
+  <body>
+    <h1 style="text-align: center; background-color: grey; color: black">
+      {{.Title}}
+    </h1>
+
+    <h3>Custom Variable :</h3>
+    {{$Date := .Date}}
+    <p>{{$Date}}</p>
+    <h3>Arithmetic Functions</h3>
+    ADD : 1,2 =
+    <span>{{add 1 2}}</span><br />
+    SUB : 1,3 =
+    <span>{{mul 1 3}}</span><br />
+    MULT : 2,4 =
+    <span>{{mul 2 4}}</span> <br />
+    DIV : 2,4 =
+    <span>{{div 2 4}}</span> <br />
+    DIV : 4,2 =
+    <span>{{div 2 4}}</span> <br />
+    REMAINDER : 2,4 =
+    <span>{{mod 2 4}}</span> <br />
+    REMAINDER : 4,2 =
+    <span>{{mod 4 2}}</span> <br />
+    IS DIVISIBLE : 4,2
+    <span>{{modBool 4 2}}</span> <br />
+    IS DIVISIBLE : 4,3
+    <span>{{modBool 4 3}}</span> <br />
+    CEIL : greater than or equal to the given number
+    <span>{{math.Ceil 4.1}}</span><br>
+    FLOOR : lesser than or equal to the given number
+    <span>{{math.Floor 4.1}}</span><br>
+    IS LESSER : 1,2
+    <span>{{lt 1 1}}</span> <br>
+    IS GREATER equal : 120,100
+    <span>{{ge 1 2}}</span> <br>
+    <h3>Params</h3>
+    <p>{{ .Params.developer }}</p>
+    <h3>Check If Params is equal to the title mentioned</h3>
+    {{ if eq .Params.Title "Data" }}
+    <h3>
+      <span style="background-color: green; padding: 5px 15px">True</span>
+    </h3>
+    {{ end }} {{ if isset .Params "developer"}}
+    <h3>Check if params is defined</h3>
+    <h3>
+      <span style="background-color: green; padding: 5px 15px">True</span>
+    </h3>
+    {{end}}
+    <h3>Raw Strings</h3>
+    {{$raw_string := `Greetings. Have a nice day ...!`}}
+    <p>{{$raw_string}}</p>
+    <h3>Is Home</h3>
+    {{.IsHome}}
+    <h3>Include partial template</h2>
+    {{ partial "content" . }}
+    <h3>Looping</h3>
+    {{$array := .Params.Stack}}
+    <ul>
+      {{ range $index, $stack := $array }}
+       <a href="#"><li>{{$stack}}</li></a>
+      {{end}}
+    </ul>
+    <h3>With index</h3>
+    <ul>
+      {{ range $index, $stack := $array }}
+       <a href="#"><li>{{$index}}</li></a>
+      {{end}}
+    </ul>
+    <h3>Key Value</h3>
+    <ul>
+      {{range $map := .Params.Allocation}}
+        {{range $lang, $alloted := .}}
+        <li>{{$lang}} - {{$alloted}}</li>
+        {{end}}
+      {{end}}
+    </ul>
+    <h3>If condition</h3>
+    {{ if .Params.title }}
+       <h4>{{ . }}</h4>
+    {{ end }}
+    Where as here with statement rebinds the context refering
+    {{ with .Params.Title }}
+      <h4>{{.}}</h4>
+    {{end}}
+    {{ if isset .Params "title" }}
+    <h4>{{ index .Params "title" }}</h4>
+    {{ end }}
+    <h3>If Else types</h3>
+    {{ if (isset .Params "stack")}}
+     {{ index .Params "developer"}}
+    {{ else }}
+     {{.Content}}
+    {{end}}
+    <h3>Logical Operators</h3>
+    {{if eq (or (isset .Params "stack") (isset .Params "developer")) true}}
+     <p>File contains both stack and developer frontmatter variable</p>
+     {{else}}
+      <p>False statements printed here</p>
+    {{end}}
+    <h3>Generate sequence of numbers</h3>
+    {{ seq 1 5 }}
+    <h3>Shuffle given range of numbers</h3>
+    {{ shuffle (seq 10 20) }}
+    <h3>Shuffle using Pipes</h3>
+    {{ (seq 5 10) | shuffle}}
+    {{ if $result := and (and (isset .Params "title") (isset .Params "date")) (isset .Params "dev") }}
+      <p>result :</p> {{$result}}
+    {{else}}
+      <p>result : </p>{{$result}}
+    {{ end }}
+   
+  </body>
+</html>

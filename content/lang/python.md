@@ -16,4 +16,4 @@ title: Python
 
 # Python Lang Heading
 > Reference link to java
-> [click here]({{< ref "lang/java" >}})
+> [click here]({{< ref "lang/java/c" >}})

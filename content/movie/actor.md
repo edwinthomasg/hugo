@@ -14,13 +14,30 @@ movie:
 keywords:
  - programming
  - coding
+summary: this is summary page for the acctor page located in movie/actor tested on the development server
+
+slug: "new-page"
 ---
 This is actor page
+
+## Actor Page{#actor-heading}  
 
 {{< figure src="/java.jpg" alt="image not found" >}}
 **git**
 {{< param "movie.running days" >}}
 [actress]({{< ref "movie/actress.md" >}})
 
+{{< vimeo KPvVf-UhT0Q >}}  
+[About]({{< ref "actress" >}})   
 
-{{< vimeo KPvVf-UhT0Q >}}
+[Google][google-link]
+
+[heading]({{< ref "actress.md#heading" >}})
+
+[actor]({{< relref "/actor" >}})
+
+[google-link]: http://www.google.com
+
+![img][img-link]
+
+[img-link]: https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg

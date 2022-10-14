@@ -2,14 +2,11 @@ baseURL: ""
 languageCode: "en-us"
 title: "New Site"
 theme: ""
-related:
-  includeNewer: false
-  indices:
-  - name: keywords
-    weight: 100
-  - name: date
-    weight: 10
-  threshold: 80
-  toLower: false
-
-
+archetypeDir: arch
+refLinksErrorLevel: "WARNING"
+refLinksNotFoundURL: "http://www.google.com"
+summaryLength: 80
+hasCJKLanguage: true
+truncate: true
+permalinks:
+ url-management: /:monthname/:year/:slug

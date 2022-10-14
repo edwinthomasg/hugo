@@ -4,6 +4,8 @@ date: 2022-10-10T11:48:39+05:30
 draft: false
 author: "williams"
 pages: "two hundred"
+aliases: ["/articles"]
+slug: "new-book"
 ---
 {{< figure src="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Strapi_Custom_Plugin_19_922eacca05.jpg" 
 alt="image not found" width="500px" 

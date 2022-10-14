@@ -26,18 +26,18 @@
     {{.Data}}
     <h1>Footer</h1>
     <p>This is some random footer content from single layout</p>
-    
-    <h2>Name</h2>
-    {{.Name}}
-    <h2>Permalink</h2>
-    {{.Permalink}}
-    <h2>Relative Link</h2>
-    {{.RelPermalink}}
-    <h2>Resource Type</h2>
-    {{.ResourceType}}
-    <h2>Media Type</h2>
-    {{.MediaType}}
-    <h2>Media type Main type</h2>
-    {{.MediaType.MainType}}
+    <h2>Cricket Cascade check</h2>
+    {{.Params.Banner}}
+    <h2>Summary Content</h2>
+    {{.Summary}}
+    <h2>Read More</h2>
+    {{ if .Truncated }} 
+    truncated
+    <a href="/java">Read More…</a>
+    {{end}}
+    <h2>Type of the page</h2>
+    {{.Type}}
+    <h2>Layout of the page</h2>
+    {{.Layout}}
   </body>
 </html>
