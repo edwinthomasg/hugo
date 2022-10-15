@@ -6,6 +6,7 @@ author: "williams"
 pages: "two hundred"
 aliases: ["/articles"]
 slug: "new-book"
+type: book
 ---
 {{< figure src="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Strapi_Custom_Plugin_19_922eacca05.jpg" 
 alt="image not found" width="500px" 

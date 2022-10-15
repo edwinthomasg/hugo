@@ -15,7 +15,6 @@ keywords:
  - programming
  - coding
 summary: this is summary page for the acctor page located in movie/actor tested on the development server
-
 slug: "new-page"
 ---
 This is actor page

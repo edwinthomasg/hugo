@@ -1,24 +1,38 @@
 <html>
-    <head>
-
-    </head>
-    <body>
-        <h1 style="background-color:gainsboro; text-align: center; color: black;">Home Page Layout</h1>
-        <h2>Title</h2>
-        {{ .Site.Title }}
-        <h2>Name</h2>
-        {{.Name}}
-        <h2>Permalink</h2>
-        {{.Permalink}}
-        <h2>Relative Link</h2>
-        {{.RelPermalink}}
-        <h2>Resource Type</h2>
-        {{.ResourceType}}
-        <h2>Media Type</h2>
-        {{.MediaType}}
-        <h2>Media type Main type</h2>
-        {{.MediaType.MainType}}
-        <h3>Is Home</h3>
-        {{.IsHome}}
-    </body>
+  <head> </head>
+  <body>
+    <h1 style="background-color: gainsboro; text-align: center; color: black">
+      Home Page Layout
+    </h1>
+    <h2>Title</h2>
+    {{ .Site.Title }}
+    <h2>Name</h2>
+    {{.Name}}
+    <h2>Permalink</h2>
+    {{.Permalink}}
+    <h2>Relative Link</h2>
+    {{.RelPermalink}}
+    <h2>Resource Type</h2>
+    {{.ResourceType}}
+    <h2>Media Type</h2>
+    {{.MediaType}}
+    <h2>Media type Main type</h2>
+    {{.MediaType.MainType}}
+    <h3>Is Home</h3>
+    {{.IsHome}}
+    <hr />
+    {{range .Site.RegularPages}}
+    <p>{{.Title}} - {{.Section}}</p>
+    {{end}}
+    <hr />
+    <ul>
+      {{range site.Pages}}
+      <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+      {{ if eq .ResourceType "page"  }} 
+true
+      {{end}}
+      {{end}}
+      
+    </ul>
+  </body>
 </html>

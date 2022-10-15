@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base of layout</title>
+</head>
+<body>
+    <p>base layout</p>
+    {{ block "codeBlock" . }}
+    
+      <p>{{.Title}}</p>
+    {{end}}
+    <hr>
+    <p>base end</p>
+    {{partial "list-sample"}}
+</body>
+</html>

@@ -1,0 +1,21 @@
+{{ define "codeBlock" }}
+<main>
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        {{.Content}}
+    </article>
+    <ul>
+    {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+    {{ end }}
+    </ul>
+    {{$pages := .Resources.ByType "image"}}
+    {{range $page := $pages}}
+     <a href="https://www.mykhel.com/img/2018/10/viratkohli-1540363340.jpg"><img src="{{$page.RelPermalink}}" alt=""></a>
+    {{end}}
+</main>
+{{ end }}

@@ -51,5 +51,25 @@
     {{.Sections}}
     <h3>Is Home</h3>
     {{.IsHome}}
+
+    <ul>
+      {{range .Pages}}
+      <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+      {{end}}
+    {{$pages := .Resources.ByType "image"}}
+    {{range $page := $pages}}
+     <img src="{{$page}}" alt="image not found">
+    {{end}}
+    <img src="/img/pic.jpg" alt="image from static">
+    <hr>
+    {{ with $page := .Resources.GetMatch "java.jpg"  }}
+    width : {{$page.Width}}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+  {{ end }}
+  <h2>From global resource - assets</h2>
+  {{ $image := resources.Get "java.jpg" }}
+    <p> {{$image.RelPermalink}}</p>
+    {{$resized := $image.Resize "10x"}}
+    <img src="{{$image.RelPermalink}}" alt="java from asset" width={{$resized}} height="100px" }}>
   </body>
 </html>
