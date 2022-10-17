@@ -38,5 +38,9 @@
     {{$myVar := "ajith"}} {{$myVar}}
     <h2>Summary</h2>
     {{truncate 20 .Summary}}
+    <hr>
+    Resources Matchings
+    {{$image := resources.Get ".jpg"}}
+    {{$image}}
   </body>
 </html>

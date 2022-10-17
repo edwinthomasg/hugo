@@ -24,5 +24,9 @@
     {{.MediaType}}
     <h2>Media type Main type</h2>
     {{.MediaType.MainType}}
+    <hr>
+    {{range $page := site.RegularPages}}
+     <p>{{.Title}}</p>
+    {{end}}
   </body>
 </html>

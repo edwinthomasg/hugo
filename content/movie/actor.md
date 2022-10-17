@@ -5,17 +5,21 @@ categories:
 - thriller
 date: "2022-10-09T19:42:12+05:30"
 draft: false
+keywords:
+- programming
+- coding
+movie:
+  running days: 100
 places:
 - erode
-tags: ["filmify"]
+slug: new-page
+summary: this is summary page for the acctor page located in movie/actor tested on
+  the development server
+tags:
+- filmify
 title: Actor
-movie: 
- running days: 100
-keywords:
- - programming
- - coding
-summary: this is summary page for the acctor page located in movie/actor tested on the development server
-slug: "new-page"
+_build:
+ render: link
 ---
 This is actor page
 

@@ -16,10 +16,14 @@
     <h3>Pages</h3>
     {{ range .Pages }}
     <ul>
-      <li><a href="{{.URL}}">{{.Title}}</a></li>
+      <li><a href="{{.Permalink}}">{{.Title}}</a></li>
     </ul>
     {{end}}
     <hr />
+    {{range $page := .Pages}}
+     Title of page : {{.Title}}
+    {{end}}
+    <hr>
     <h2>Bundle Type</h2>
     {{.BundleType}}
     <h2>Is Home</h2>
@@ -71,5 +75,32 @@
     <p> {{$image.RelPermalink}}</p>
     {{$resized := $image.Resize "10x"}}
     <img src="{{$image.RelPermalink}}" alt="java from asset" width={{$resized}} height="100px" }}>
+    <hr>
+    <h2 style="font-weight:lighter; text-decoration: underline;">Resources Matchings <b>Get</b></h2>
+    {{$img := resources.Get "java.jpg"}}
+    <img src="{{$img.Permalink}}" alt="img not rendered">
+    <hr>
+    <h2 style="font-weight:lighter; text-decoration: underline;">Resources Matchings <b>Match</b></h2>
+    {{resources.Match "**.jpg"}}
+    <hr>
+    <h2 style="font-weight:lighter; text-decoration: underline;">Resources Matchings <b>Get Match</b></h2>
+    returns the first match : {{resources.GetMatch "javaLang"}}
+    <hr>
+    <h2 style="font-weight:lighter; text-decoration: underline;">Resources Matchings <b>Get Remote</b></h2>
+    returns from the remote server: 
+    {{with $resource := resources.GetRemote "https://gohugo.io/images/gohugoio-card-1.png"}}
+      <img src="{{.Permalink}}" alt="image not found">
+    {{end}}
+    <hr>
+    {{range $image := .Resources.ByType "image"}}
+     
+    {{ $image = $image.Resize "200x r90" }}
+     {{$image := $image.Resize "550x500"}}
+
+     <img src="{{$image.RelPermalink}}" alt="image not found">
+     
+    {{end}}
+    <hr>
+    
   </body>
 </html>

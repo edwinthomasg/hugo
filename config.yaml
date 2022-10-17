@@ -10,3 +10,5 @@ hasCJKLanguage: true
 truncate: true
 permalinks:
  url-management: /:monthname/:year/:slug
+buildDrafts: true
+relativeURLs: true

@@ -1,0 +1,61 @@
+CLI COMMANDS : 
+sudo apt-get install hugo
+hugo new site "site name" -f config file format
+ default config format will be - toml
+hugo new content file or dir/content file
+hugo server
+hugo server -D
+env HUGO_TITLE="" hugo server -D
+hugo convert formats
+ formats:
+    - toJSON
+    - toTOML
+    - toYAML
+hugo config - list down all the configurations
+hugo version
+hugo env - environment and hugo version info
+hugo list type
+  type:
+    - all
+    - drafts
+    - expired
+    - future
+
+CONFIG VARIABLES: 
+  baseURL
+  title
+  theme
+  languageCode
+  archetypeDir
+  assetDir
+  publishDir
+  contentDir
+  dataDir
+  watch
+  permalinks
+  summaryLength
+  taxonomies
+  truncate
+  refLinksErrorLevel
+  refLinksNotFoundURL
+  buildDrafts
+  buildExpired
+  buildFuture
+  disableAliases
+  cascade
+  disableLiveReload
+
+BUILD OPTIONS:
+ _build: 
+   render : always,never,link
+      always - will get rendered and  permalink etc
+      never - not added to public dir or rendered to disk and no rel permalink is given
+      link - will not be rendered to public dir but will have a rel permalink
+   list : always,never,local
+      always - available in all page collections eg: site.Pages and local pages too
+      never - not be included in any page collection
+      local - will be available only in local pages
+   publishResources : false
+      when resource doesnt have any permalinks or rel links then it wil
+      not be added to public folder when building (hugo or hugo -D)
+      

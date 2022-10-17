@@ -1,7 +1,7 @@
 ---
-title: "Summary"
-date: 2022-10-14T11:31:03+05:30
+date: "2022-10-14T11:31:03+05:30"
 draft: true
+title: Summary
 ---
 
 ## Summary Page

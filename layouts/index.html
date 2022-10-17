@@ -32,7 +32,9 @@
 true
       {{end}}
       {{end}}
-      
+      {{with site.GetPage "info"}}
+       {{.Content}}
+      {{end}}
     </ul>
   </body>
 </html>

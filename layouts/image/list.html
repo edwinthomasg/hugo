@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Section</title>
+</head>
+<body>
+    <p style="color: brown;">This is a list page for image section</p>
+    {{range $page := .Pages}}
+     {{.Title}}
+    {{end}}
+    {{.Resources.ByType "image"}}
+    
+</body>
+</html>

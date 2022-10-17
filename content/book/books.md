@@ -1,11 +1,12 @@
 ---
-title: "Books"
-date: 2022-10-10T11:48:39+05:30
+aliases:
+- /articles
+author: williams
+date: "2022-10-10T11:48:39+05:30"
 draft: false
-author: "williams"
-pages: "two hundred"
-aliases: ["/articles"]
-slug: "new-book"
+pages: two hundred
+slug: new-book
+title: Books
 type: book
 ---
 {{< figure src="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Strapi_Custom_Plugin_19_922eacca05.jpg" 

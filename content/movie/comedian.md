@@ -1,14 +1,14 @@
 ---
 author: gautam
 categories:
- - horror
+- horror
 date: "2022-10-09T19:49:36+05:30"
-draft: false
-tags:
- - mumbai
-title: Comedian
-summary: "This is all about comedian scripts for a movie"
 display: true
+draft: false
+summary: This is all about comedian scripts for a movie
+tags:
+- mumbai
+title: Comedian
 ---
 
 # This is comedian page
