@@ -9,6 +9,9 @@ summary: This is all about comedian scripts for a movie
 tags:
 - mumbai
 title: Comedian
+likes:
+- twitter
+- fb
 ---
 
 # This is comedian page

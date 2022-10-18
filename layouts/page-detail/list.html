@@ -1,0 +1,7 @@
+This is list page
+{{.Content}}
+<ol>
+    {{range $page := .Pages}}
+     <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ol>

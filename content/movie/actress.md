@@ -8,11 +8,10 @@ draft: false
 tags:
 - filmify
 title: Actress
+likes:
+ - fb
 ---
 
 random content on actress page
 # heading  
 
-{{< quote colour="red" >}}
-    <p>inner html <b><i>italic text</i></b></p>
-{{< /quote >}}

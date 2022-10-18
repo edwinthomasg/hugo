@@ -2,10 +2,10 @@
 <html>
   <head></head>
   <body>
-    {{ partial "related" . }}
-    <h1 style="text-align: center; background-color: cadetblue; color: white">
+    {{ partial "header" . }}
+    <h2 style="text-align: center;">
       Single Page Movie Layout
-    </h1>
+    </h2>
     <h2>Site Title</h2>
     {{ .Site.Title }}
     <h3>Page Title</h3>
@@ -42,5 +42,12 @@
     Resources Matchings
     {{$image := resources.Get ".jpg"}}
     {{$image}}
+    <h3>Current Section</h3>
+    {{.Page.CurrentSection}}
+    {{ range $page := .Site.Pages}}
+       {{ if eq (.InSection $page) true }}
+          <p>{{$page.Title}} - {{$page.CurrentSection}}</p>
+       {{end}}
+    {{end}}
   </body>
 </html>

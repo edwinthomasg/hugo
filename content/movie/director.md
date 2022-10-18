@@ -10,4 +10,4 @@ title: Director
 
 This is director page
 
-{{< quote colour="red" >}}
+

@@ -2,7 +2,7 @@
 <html>
   <head></head>
   <body>
-    {{ partial "related" . }}
+    {{ partial "header" . }}
     <h1 style="color: white; background-color: blue; text-align: center">
       Movie List
     </h1>
@@ -28,5 +28,6 @@
     {{range $page := site.RegularPages}}
      <p>{{.Title}}</p>
     {{end}}
+    <hr>
   </body>
 </html>

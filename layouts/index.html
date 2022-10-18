@@ -20,21 +20,20 @@
     {{.MediaType.MainType}}
     <h3>Is Home</h3>
     {{.IsHome}}
-    <hr />
-    {{range .Site.RegularPages}}
-    <p>{{.Title}} - {{.Section}}</p>
-    {{end}}
-    <hr />
+    <h2 style="text-decoration: underline;">Taxonomy Links :-</h2>
     <ul>
-      {{range site.Pages}}
-      <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-      {{ if eq .ResourceType "page"  }} 
-true
+      {{range $page := site.Pages}}
+      {{with eq $page.Kind "term"}}
+        <li><a href="{{$page.RelPermalink}}">{{$page.Title}}</a></li>
       {{end}}
-      {{end}}
-      {{with site.GetPage "info"}}
-       {{.Content}}
-      {{end}}
+    {{end}}
     </ul>
+    <hr>
+    <h2>Regular Pages filtered by book section</h2>
+    {{range $page := .Site.RegularPages}}
+     {{if eq $page.Section "book" }}
+       {{.Title}}
+    {{end}}
+    {{end}}
   </body>
 </html>

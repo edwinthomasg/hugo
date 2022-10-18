@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>{{.Title}}</title>
   </head>
   <body>
-    {{ partial "related" . }}
-    <h1>Is Section</h1>
+    {{ partial "header" . }}
+    <h2 style="text-align: center;">List page default</h2>
+    <h2>Is Section</h2>
     {{.IsSection}}
-    <h1 style="text-align: center; background-color: brown; color: aliceblue">
-      List Page Default
-    </h1>
     <h3>Index Content</h3>
     {{.Content}}
     <hr />
@@ -28,7 +26,7 @@
     {{.BundleType}}
     <h2>Is Home</h2>
     {{.IsHome}}
-    <h1>Footer</h1>
+    <h2>Footer</h2>
     <footer>
       <p>This is some random footer content from list layout</p>
     </footer>

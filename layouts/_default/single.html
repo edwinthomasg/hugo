@@ -42,6 +42,9 @@
     <hr>
     {{.Name}}
     <hr>
-
+    {{ partial "content" (dict "customTitle" .Title) }}
+    <h3>Table of contents</h3>
+    {{.TableOfContents}}
+    {{.WordCount}}
   </body>
 </html>

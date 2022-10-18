@@ -7,4 +7,3 @@ title: Tester
 
 This is testing team
 
-{{< positional edwin blue >}}

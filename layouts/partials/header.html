@@ -1,0 +1,11 @@
+<header style="text-align: center; background-color: brown; color: aliceblue; height:50px; padding: 5px;">
+  <h3>HUGO WEB FRAMEWORK</h3>  
+</header>
+<nav style="background-color:gray; padding: 10px; ">
+    <ul>
+        {{range $menu := .Site.Menus.main}}
+        <li style="display: inline; margin-right: 15px;" ><a href="{{.URL}}" style="text-decoration: none; color: white; font-size: larger;">{{.Name}}</a></li>
+        {{end}}
+
+    </ul>
+</nav>

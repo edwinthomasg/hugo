@@ -5,9 +5,4 @@ keywords: development
 title: Dev
 ---
 This is developer team.
-{{% inner %}}
- this is inner content  
- this is inner content two  
- > block quotes
- **bold**  
-{{% /inner %}}
+

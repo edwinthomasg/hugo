@@ -12,3 +12,12 @@ permalinks:
  url-management: /:monthname/:year/:slug
 buildDrafts: true
 relativeURLs: true
+taxonomies:
+ tag: tags
+ category: categories
+ media: medias
+disableLiveReload: false
+
+# disableKinds:
+#  - taxonomy
+#  - term
