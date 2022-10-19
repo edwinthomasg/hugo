@@ -8,6 +8,7 @@
     {{ .Site.Title }}
     <h2>Name</h2>
     {{.Name}}
+    <p>Developed by <b>{{.Site.Params.developer}}</b> from team <b>{{.Site.Params.team}}</b></p>
     <h2>Permalink</h2>
     {{.Permalink}}
     <h2>Relative Link</h2>
@@ -35,5 +36,7 @@
        {{.Title}}
     {{end}}
     {{end}}
+
+    {{ partial "footer" (dict "footerContent" .Site.Copyright) }}
   </body>
 </html>

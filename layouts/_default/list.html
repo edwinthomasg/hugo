@@ -99,6 +99,35 @@
      
     {{end}}
     <hr>
-    
+    {{range $page := .Site.Pages}}
+       {{if and (eq $page.Kind "section") (eq $page.Title "Url-managements")}}
+         {{range last 1 .Pages}}
+            {{.Params.location | urlize}}
+            <h2>Title of current context</h2>
+            <p>{{.Title}}</p>
+            <h2>Title of global context</h2>
+            <p>{{$.Title}}</p>
+         {{end}}
+       {{end}}
+    {{end}}
+    Output results with newlines and whitespaces
+    <div>
+                {{.Title }}
+    </div>
+    Output results without newlines and whitespaces
+    <div>
+     
+      {{- .Title -}}
+</div>
+    <h2>Comments Section</h2>
+    <p>{{/* comments added {{.Title}} */}}</p>
+    <h3>Trying out html comment for go templates</h3>
+    <!-- {{ $author := "Emma Goldman" }} was a great woman. -->
+    {{ $author }}
+    If there is any error in commented go template then hugo will throw an error while building
+    <hr>
+    Is Section
+    {{.IsSection}}
   </body>
+
 </html>

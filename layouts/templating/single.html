@@ -60,7 +60,7 @@
     {{$array := .Params.Stack}}
     <ul>
       {{ range $index, $stack := $array }}
-       <a href="#"><li>{{$stack}}</li></a>
+       <a href=""><li>{{$stack}}</li></a>
       {{end}}
     </ul>
     <h3>With index</h3>
@@ -78,7 +78,7 @@
       {{end}}
     </ul>
     <h3>If condition</h3>
-    {{ if .Params.title }}
+    {{ if .Params.Title }}
        <h4>{{ . }}</h4>
     {{ end }}
     Where as here with statement rebinds the context refering
@@ -112,5 +112,29 @@
       <p>result : </p>{{$result}}
     {{ end }}
    
+    <h3>Raw Strings</h3>
+    {{$msg := `hello 
+      world`}}
+    <p>{{$msg}}</p>
+    {{ if eq $msg `hello 
+      world` }}
+        yes
+    {{else}}
+         no
+    {{end}}
+    {{$msg = "hi"}}
+    {{$msg}}
+    <hr>
+    {{site.IsServer}}
+    <br>
+    {{hugo.Environment}}
+    {{hugo.IsProduction}}
+    <hr>
+    {{if isset .Params "title"}}
+       {{.}}
+    {{end}}
+    {{ shuffle (seq 1 5) }}
+    <hr>
+    {{index .Params.Stack 2}}
   </body>
 </html>

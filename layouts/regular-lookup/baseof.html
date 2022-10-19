@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Title}}</title>
+</head>
+<body>
+    <p>base layout with less priority</p>
+    {{ block "single" . }}
+    {{end}}
+    <hr>
+    <p>base end</p>
+</body>
+</html>

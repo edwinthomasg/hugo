@@ -1,9 +1,9 @@
 ---
 date: "2022-10-14T11:31:03+05:30"
 draft: true
-title: Summary
 medias:
-    - fb
+- fb
+title: Summary
 ---
 
 ## Summary Page

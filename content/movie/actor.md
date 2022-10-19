@@ -1,4 +1,6 @@
 ---
+_build:
+  render: link
 author: gautam
 categories:
 - horror
@@ -18,8 +20,6 @@ summary: this is summary page for the acctor page located in movie/actor tested 
 tags:
 - filmify
 title: Actor
-_build:
- render: link
 ---
 This is actor page
 

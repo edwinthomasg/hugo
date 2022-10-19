@@ -9,5 +9,3 @@ title: Director
 ---
 
 This is director page
-
-

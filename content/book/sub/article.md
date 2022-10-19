@@ -4,11 +4,11 @@ aliases:
 author: williams
 date: "2022-10-12T17:57:05+05:30"
 draft: false
+medias:
+- insta
+- twitter
 title: Article
 type: sub
-medias:
-    - insta
-    - twitter
 ---
 
 # This is article page from sub section placed inside book section

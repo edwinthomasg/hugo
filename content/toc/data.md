@@ -1,7 +1,7 @@
 ---
-title: "Data"
-date: 2022-10-18T21:13:23+05:30
+date: "2022-10-18T21:13:23+05:30"
 draft: true
+title: Data
 ---
 
 ## Introduction

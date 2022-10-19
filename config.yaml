@@ -17,7 +17,14 @@ taxonomies:
  category: categories
  media: medias
 disableLiveReload: false
-
+copyright: © 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
+params:
+  developer: edwin
+  team: lamp
+markup:
+  tableOfContents:
+     endLevel: 6
+     startLevel: 1
 # disableKinds:
 #  - taxonomy
 #  - term

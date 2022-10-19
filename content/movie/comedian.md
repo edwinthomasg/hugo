@@ -5,13 +5,13 @@ categories:
 date: "2022-10-09T19:49:36+05:30"
 display: true
 draft: false
+likes:
+- twitter
+- fb
 summary: This is all about comedian scripts for a movie
 tags:
 - mumbai
 title: Comedian
-likes:
-- twitter
-- fb
 ---
 
 # This is comedian page
