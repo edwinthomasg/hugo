@@ -11,5 +11,13 @@
     <i style="color: brown">{{.Title}}</i>
     <hr />
     {{.Section}}
+    <hr />
+    <h3>url management</h3>
+    Link - {{.Params.urllink}}
+    <br>
+    Url other than http,https and mail to rest of all will be rendered as ZgotmplZ
+    <a href="{{.Params.urllink | safeURL}}">link</a>
+    <h3>Content</h3>
+    {{.Content}}
   </body>
 </html>

@@ -59,3 +59,168 @@ BUILD OPTIONS:
       when resource doesnt have any permalinks or rel links then it wil
       not be added to public folder when building (hugo or hugo -D)
       
+Lookup Order:
+Regular pages:
+1.content/posts/page.md
+  - posts/single.html.html
+  - posts/single.html
+  - default/single.html.html
+  - default/single.html
+2.base template for content/posts/page.md
+  - posts/single-baseof.html.html
+  - posts/baseof.html.html
+  - posts/single-baseof.html
+  - posts/baseof.html
+  - default/single-baseof.html.html
+  - default/baseof.html.html
+  - default/single-baseof.html
+  - default/baseof.html
+3.with layout set for content/posts/page.md
+  - posts/customlayout.html.html
+  - posts/single.html.html
+  - posts/customlayout.html
+  - posts/single.html
+  - default/customlayout.html.html
+  - default/single.html.html
+  - default/customlayout.html
+  - default/single.html
+4.base template for content/posts/page.md when layout is set
+  - posts/customlayout-baseof.html.html
+  - posts/single-baseof.html.html
+  - posts/baseof.html.html
+  - posts/customlayout-baseof.html
+  - posts/single-baseof.html
+  - posts/baseof.html
+  - default/customlayout-baseof.html.html
+  - default/single-baseof.html.html
+  - default/baseof.html.html
+  - default/customlayout-baseof.html
+  - default/single-baseof.html
+  - default/baseof.html
+
+Home Page:
+1.Home page - index.html
+  - index.html.html
+  - home.html.html
+  - list.html.html
+  - index.html
+  - home.html
+  - list.html
+  - default/index.html.html
+  - default/home.html.html
+  - default/list.html.html
+  - default/index.html
+  - default/home.html
+  - default/list.html
+2.base template for home page
+  - index-baseof.html.html
+  - home-baseof.html.html
+  - list-baseof.html.html
+  - baseof.html.html
+  - index-baseof.html
+  - home-baseof.html
+  - list-baseof.html
+  - baseof.html
+  - default/index-baseof.html.html
+  - default/home-baseof.html.html
+  - default/list-baseof.html.html
+  - default/baseof.html.html
+  - default/index-baseof.html
+  - default/home-baseof.html
+  - default/list-baseof.html
+  - default/baseof.html
+3.home page with type set that is section - homepage
+  - homepage/index.html.html
+  - homepage/home.html.html
+  - homepage/list.html.html
+  - homepage/index.html
+  - homepage/home.html
+  - homepage/list.html
+  - default/index.html.html
+  - default/home.html.html
+  - default/list.html.html
+  - default/index.html
+  - default/home.html
+  - default/list.html
+  - index.html.html
+  - home.html.html
+  - list.html.html
+  - index.html
+  - home.html
+  - list.html
+4.base template for home with type - homepage
+  - homepage/index-baseof.html.html
+  - homepage/home-baseof.html.html
+  - homepage/list-baseof.html.html
+  - homepage/baseof.html.html
+  - homepage/index-baseof.html
+  - homepage/home-baseof.html
+  - homepage/list-baseof.html
+  - homepage/baseof.html
+
+  - default/index-baseof.html.html
+  - default/home-baseof.html.html
+  - default/list-baseof.html.html
+  - default/baseof.html.html
+  - default/index-baseof.html
+  - default/home-baseof.html
+  - default/list-baseof.html
+  - default/baseof.html
+
+  - index-baseof.html.html
+  - home-baseof.html.html
+  - list-baseof.html.html
+  - baseof.html.html
+  - index-baseof.html
+  - home-baseof.html
+  - list-baseof.html
+  - baseof.html
+5.homepage with layout set
+  - custom-layout.html.html
+  - index.html.html
+  - home.html.html
+  - list.html.html
+  - custom-layout.html
+  - index.html
+  - home.html
+  - list.html
+  - default/custom-layout.html.html
+  - default/index.html.html
+  - default/home.html.html
+  - default/list.html.html
+  - default/custom-layout.html
+  - default/index.html
+  - default/home.html
+  - default/list.html
+
+Section pages:
+1.Section list content/posts with type "blog"
+  - blog/posts.html.html
+  - blog/section.html.html
+  - blog/list.html.html
+  - blog/posts.html
+  - blog/section.html
+  - blog/list.html
+  
+  - posts/posts.html.html
+  - posts/section.html.html
+  - posts/list.html.html
+  - posts/posts.html
+  - posts/section.html
+  - posts/list.html
+
+  - section/posts.html.html
+  - section/section.html.html
+  - section/list.html.html
+  - section/posts.html
+  - section/section.html
+  - section/list.html
+
+  - default/posts.html.html
+  - default/section.html.html
+  - default/list.html.html
+  - default/posts.html
+  - default/section.html
+  - default/list.html
+
+  
