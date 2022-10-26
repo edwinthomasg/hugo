@@ -4,6 +4,7 @@ draft: true
 tags:
 - history
 title: Article5
+publishDate: "2022-10-23"
 ---
 
 This is article 5 page.

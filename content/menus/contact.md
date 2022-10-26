@@ -5,6 +5,8 @@ menu:
   main:
     name: contact
 title: Contact
+summary: "summary for contact page"
+type: movie
 ---
 
 This is contact page for a company

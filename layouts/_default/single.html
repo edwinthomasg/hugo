@@ -19,5 +19,12 @@
     <a href="{{.Params.urllink | safeURL}}">link</a>
     <h3>Content</h3>
     {{.Content}}
+    <h3>Summary</h3>
+    {{.Summary}}
+    <hr>
+    {{.IsSection}}
+    <h3>Regular Pages</h3>
+    
+    {{.Resources.ByType "image"}}
   </body>
 </html>

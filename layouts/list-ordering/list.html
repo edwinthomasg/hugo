@@ -1,0 +1,42 @@
+<h2>Ordered by weight</h2>
+<ul>
+  {{range .Pages.ByWeight}}
+  <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+  {{end}}
+</ul>
+<h2>Ordered by date</h2>
+<ul>
+    {{range .Pages.ByDate}}
+    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ul>
+<h2>Ordered by custom param with alphabets</h2>
+<ul>
+    {{range (.Pages.ByParam "priority")}}
+    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ul>
+<h2>Ordered by custom param with number ranking</h2>
+<ul>
+    {{range (.Pages.ByParam "ranking")}}
+    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ul>
+<h2>Ordered by title</h2>
+<ul>
+    {{range .Pages.ByTitle}}
+    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ul>
+<h2>Ordered by link title</h2>
+<ul>
+    {{range .Pages.ByLinkTitle}}
+    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ul>
+<h2>Ordered by title in reverse</h2>
+<ul>
+    {{range .Pages.ByTitle.Reverse}}
+    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+    {{end}}
+</ul>

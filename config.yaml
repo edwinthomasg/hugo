@@ -5,7 +5,7 @@ theme: ""
 archetypeDir: arch
 refLinksErrorLevel: "WARNING"
 refLinksNotFoundURL: "http://www.google.com"
-summaryLength: 80
+summaryLength: 10
 hasCJKLanguage: true
 truncate: true
 permalinks:
@@ -21,6 +21,7 @@ copyright: © 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4
 params:
   developer: edwin
   team: lamp
+  alterlink: "help desk"
 markup:
   tableOfContents:
      endLevel: 6

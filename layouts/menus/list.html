@@ -1,2 +1,18 @@
 {{partial "header" .}}
-
+<hr />
+Section Title
+<h2>{{ .Title }}</h2>
+<ul>
+  {{ range .Pages }}
+  <li><a href="">{{.Title}}</a></li>
+  {{ .Render "summary" }}
+  <h2>WordCount : {{.WordCount}}</h2>
+  {{ end }}
+</ul>
+<hr>
+<h2>Rendering Li inside a list page</h2>
+<ul>
+    {{range .Pages}}
+    {{.Render "li"}}
+    {{end}}
+</ul>

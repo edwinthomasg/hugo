@@ -1,0 +1,8 @@
+
+
+{{range .Pages.GroupBy "Type"}}
+  <h2>Key : {{.Key}} </h2>
+  {{range .Pages}}
+    {{.Title}}
+  {{end}}
+{{end}}

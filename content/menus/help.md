@@ -6,6 +6,7 @@ menu:
     name: help
     weight: 5
 title: Help
+summary: "summary for help page"
 ---
 
 This is a help page for a company

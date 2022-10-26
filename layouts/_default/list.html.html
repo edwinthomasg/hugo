@@ -1,0 +1,15 @@
+This is list page with high priority inside default
+<h2>Title of the web page</h2>
+<p>{{.Title}}</p>
+
+<hr>
+{{partial "by-field" .}}
+<hr>
+{{range .Pages.ByPublishDate}}
+  <a href="">{{.Title}}</a>
+{{end}}
+<p>Is Section - {{.IsSection}}</p>
+
+{{range site.RegularPages}}
+<p>{{.Title}} - {{.Section}}</p>
+{{end}}

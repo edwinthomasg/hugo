@@ -136,5 +136,7 @@
     {{ shuffle (seq 1 5) }}
     <hr>
     {{index .Params.Stack 2}}
+    <h3>Comments Section</h3>
+    {{ printf "<!-- Our website is named: %s -->" .Site.Title | safeHTML }}
   </body>
 </html>

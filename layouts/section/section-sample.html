@@ -1,0 +1,9 @@
+{{partial "section-header" .}}
+{{partial "section-subheader" .}}
+{{.Section}}
+<ul>
+    {{range .Pages}}
+      {{.Render "li" }}
+    {{end}}
+</ul>
+{{partial "section-footer" .}}
