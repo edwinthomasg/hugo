@@ -1,0 +1,33 @@
+This is section page for articles
+
+{{with .Site.GetPage "section" "movie" }}
+  <h2>{{.Content}}</h2>
+{{end}}
+
+<hr>
+<h2>Get Page with page kind</h2>
+{{ with .Site.GetPage "page" "comedian"}}
+  {{.Content}}
+{{end}}
+<hr>
+Section Kind : {{.Site.GetPage "section" "movie"}}
+<br>
+Page Kind : {{.Site.GetPage "page" "comedian"}}
+
+<hr>
+
+<p>{{with .Site.GetPage "section" "tax"}}
+      has index file
+      <h3>Inside</h3>
+      {{.Title}}
+    {{end}}
+</p>
+
+<hr>
+<p>{{with .Site.GetPage "section" "movie"}}
+    has index file
+    <h3>Inside</h3>
+    {{.Title}}
+  {{end}}
+</p>
+

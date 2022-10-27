@@ -1,11 +1,11 @@
 ---
-title: "Page3"
-date: 2022-10-25T14:31:43+05:30
+date: "2022-10-25T14:31:43+05:30"
 draft: true
-weight: 2
+linkTitle: link-page3
 priority: b
 ranking: 1
-linkTitle: "link-page3"
+title: Page3
+weight: 2
 ---
 
 This is page3 with weight 2

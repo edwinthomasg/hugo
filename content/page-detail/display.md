@@ -7,4 +7,3 @@ title: Display
 
 This page will give information about page variables
 
-{{< getParams edwin 22 >}}

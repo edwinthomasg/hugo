@@ -26,6 +26,3 @@ markup:
   tableOfContents:
      endLevel: 6
      startLevel: 1
-# disableKinds:
-#  - taxonomy
-#  - term

@@ -1,4 +1,4 @@
-This is list page with high priority inside default
+This is list page with high priority inside default..
 <h2>Title of the web page</h2>
 <p>{{.Title}}</p>
 
@@ -6,10 +6,18 @@ This is list page with high priority inside default
 {{partial "by-field" .}}
 <hr>
 {{range .Pages.ByPublishDate}}
-  <a href="">{{.Title}}</a>
+  <a href="{{.RelPermalink}}">{{.Title}}</a>
 {{end}}
+
 <p>Is Section - {{.IsSection}}</p>
 
 {{range site.RegularPages}}
 <p>{{.Title}} - {{.Section}}</p>
 {{end}}
+<h2>Type of a page</h2>
+{{.Type}}
+<hr>
+
+<h2>Kind related index files content</h2>
+{{$page := .Site.GetPage "section" "movie"}}
+{{$page.Content}}

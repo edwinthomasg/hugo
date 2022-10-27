@@ -4,8 +4,8 @@ draft: true
 menu:
   main:
     name: contact
+summary: summary for contact page
 title: Contact
-summary: "summary for contact page"
 type: movie
 ---
 

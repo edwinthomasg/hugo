@@ -3,7 +3,7 @@ date: "2022-10-14T14:41:35+05:30"
 draft: true
 location: url content
 title: Sample
-urllink: "irc://irc.freenode.net/#golang"
+urllink: irc://irc.freenode.net/#golang
 ---
 
 This is a content page for sample inside url management

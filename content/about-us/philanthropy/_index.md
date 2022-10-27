@@ -1,7 +1,8 @@
 ---
-title: "Philanthropy"
-date: 2022-10-26T21:43:19+05:30
+date: "2022-10-27T11:11:10+05:30"
 draft: true
-author: "default"
+title: Philanthropy
+type: about-us/philanthropy
 ---
 
+This is root page for philanthropy
