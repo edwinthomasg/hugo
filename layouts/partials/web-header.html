@@ -1,0 +1,7 @@
+<header style="background-color: black; text-align: center; color: aliceblue;">
+    {{ with .Resources.ByType "image"}}
+    {{range .}}
+    <img src="{{.RelPermalink}}" alt="image not rendered" style="height: 100px ; width:120px;" >
+    {{end}}
+    {{end}}
+</header>

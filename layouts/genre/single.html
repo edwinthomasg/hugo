@@ -1,0 +1,19 @@
+{{define "single"}}
+
+<h2>{{.Title | upper}}</h2>
+ {{.Content}}
+ {{if isset .Params "imgurl"}}
+   <img src="{{.Params.imgurl}}" alt="image not found" style="height: 300px;width: 250px;">
+ {{else}}
+   {{with resources.GetRemote "https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"}}
+    <img src="{{.RelPermalink}}" alt="No Image Found">
+   {{end}}
+ {{end}}
+
+  <ul>
+      {{ range .Site.Taxonomies.platforms }}
+       <li style="background-color: grey ; display:inline; padding: 10px; "><a href="{{ .Page.Permalink }}" style="color: black">{{ .Page.Title }}</a></li>
+      {{ end }}
+  </ul>
+   
+{{end}}

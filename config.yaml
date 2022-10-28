@@ -1,7 +1,7 @@
 baseURL: ""
 languageCode: "en-us"
-title: "New Site"
-theme: ""
+title: "Movie times"
+theme: "PaperMod"
 archetypeDir: arch
 refLinksErrorLevel: "WARNING"
 refLinksNotFoundURL: "http://www.google.com"
@@ -16,8 +16,9 @@ taxonomies:
  tag: tags
  category: categories
  media: medias
+ platform: platforms
 disableLiveReload: false
-copyright: © 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
+copyright: © 2022 Movie Times.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
 params:
   developer: edwin
   team: lamp

@@ -224,4 +224,12 @@ Section pages:
   - default/section.html
   - default/list.html
 
+Taxonomy lookup order : 
+  Folder lookup : for categories taxonomy
+    categories -> category -> taxonomy -> _default
+     category.terms.html
+     terms.html
+     taxonomy.html
+     list.html
+
   

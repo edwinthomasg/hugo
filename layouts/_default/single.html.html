@@ -2,3 +2,18 @@ This is single page inside default with high priority
 
 <h2>Type of a page</h2>
 {{.Type}}
+
+<a href="../movie/single.html">comedian</a>
+
+<footer class="post-footer">
+    
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+     {{$tags}}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+       yes
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+   
+  </footer>
