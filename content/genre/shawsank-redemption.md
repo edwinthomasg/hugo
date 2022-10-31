@@ -5,6 +5,7 @@ entertainment: "cinema"
 date: 2022-10-28T11:29:01+05:30
 slug: shawsank
 platforms: hotstar
+platforms_weight: 10
 ---
 
 **INTRODUCTION :**  

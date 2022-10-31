@@ -17,7 +17,6 @@ taxonomies:
  category: categories
  media: medias
  platform: platforms
-disableLiveReload: false
 copyright: © 2022 Movie Times.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
 params:
   developer: edwin
@@ -27,3 +26,4 @@ markup:
   tableOfContents:
      endLevel: 6
      startLevel: 1
+disableLiveReload: false

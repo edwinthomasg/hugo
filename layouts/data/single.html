@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{.Title}}</title>
+</head>
+<body>
+  This is single {{.Content}}
+
+<h4>Developers</h4>
+{{range .Site.Data.dev}}
+<h4>Name : <span>{{.name}}</span></h4>
+{{end}}
+
+<hr />
+
+<h4>Jazz Data</h4>
+<ul>
+  {{range .Site.Data.jazz}} {{range .discography}}
+  <li><a href="">{{.}}</a></li>
+  {{end}} {{end}}
+</ul>
+<hr />
+<h4>Testers from xml file</h4>
+{{range .Site.Data.tester}}
+<p>{{.name}}</p>
+{{end}}
+
+<hr />
+<h4>User data from yaml format</h4>
+
+<div>
+  Short Description of {{.Site.Data.user.Name}}:
+  <p>{{ index .Site.Data.user "Short Description" | markdownify }}</p>
+</div>
+
+<hr>
+<h4>Json data from remote server</h4>
+{{ range $data := getJSON "https://jsonplaceholder.typicode.com/posts" | first 5}}
+  <p>{{$data.title}}</p>
+{{end}}
+
+<hr>
+
+<h4>Csv data from remote server</h4>
+  <table style="border: 2px solid red;">
+    <thead>
+      <tr>
+        {{$csv := getCSV "," "https://demo-live-data.highcharts.com/time-data.csv"}}
+        {{ range index $csv 0}}
+          <th style="border: 2px solid red;padding: 10px;">{{.}}</th>
+        {{end}}
+      </tr>
+    </thead>
+    <tbody>
+        {{range $ind, $value := getCSV "," "https://demo-live-data.highcharts.com/time-data.csv"}}
+           {{if ne $ind 0}}
+           <tr>
+            <td style="border: 2px solid red; padding: 10px">{{index $value 0}}</td>
+            <td style="border: 2px solid red; padding: 10px;">{{index $value 1}}</td> 
+           </tr>
+           {{end}}
+        {{end}}
+    </tbody>
+  </table>
+<hr>
+<h4>From json</h4>
+{{$jsonData := getJSON "https://jsonplaceholder.typicode.com" "/posts"}}
+{{range $jsonData }}
+   <p>{{.title}}</p>
+{{end}}
+
+<h4>Local files</h4>
+{{$json := getJSON "/data/dev.json"}}
+{{range $json}}
+  <a href="">{{.name}} - {{.age}}</a>
+{{end}}
+<!-- markdownify will convert md text to markdown
+-->
+
+  
+</body>
+</html>

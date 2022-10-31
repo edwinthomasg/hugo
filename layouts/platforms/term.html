@@ -1,6 +1,10 @@
 <h2>Platform - {{.Title}} :</h2>
+<h3>Description:</h3>
+{{.Content}}
 <ul>
     {{range .Data.Pages}}
       <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
     {{end}}
 </ul>
+
+

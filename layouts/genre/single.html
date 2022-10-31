@@ -5,8 +5,8 @@
  {{if isset .Params "imgurl"}}
    <img src="{{.Params.imgurl}}" alt="image not found" style="height: 300px;width: 250px;">
  {{else}}
-   {{with resources.GetRemote "https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"}}
-    <img src="{{.RelPermalink}}" alt="No Image Found">
+   {{with resources.GetRemote "https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg"}}
+     <img src="{{.RelPermalink}}" alt=""  height="100px">
    {{end}}
  {{end}}
 
@@ -15,5 +15,19 @@
        <li style="background-color: grey ; display:inline; padding: 10px; "><a href="{{ .Page.Permalink }}" style="color: black">{{ .Page.Title }}</a></li>
       {{ end }}
   </ul>
-   
+   <hr>
+   Tagged with 
+   {{range .GetTerms "platforms"}}
+     <span style="background-color: grey ; display:inline; padding: 5px; ">{{.Title | upper}}</span>
+   {{end}}
+   {{ $taxo := "platforms" }} <!-- Use the plural form here -->
+{{ with .Param $taxo }}
+    <strong>Director{{ if gt (len .) 1 }}s{{ end }}:</strong>
+    {{ range $index, $director := . }}
+        {{- if gt $index 0 }}, {{ end -}}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxo $director) -}}
+            <a href="{{ .Permalink }}">{{ $director }}</a>
+        {{- end -}}
+    {{- end -}}
+{{ end }}
 {{end}}
