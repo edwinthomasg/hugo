@@ -3,7 +3,8 @@ title: titanic
 draft: false
 entertainment: "cinema"
 date: 2022-10-28T11:29:19+05:30
-platforms: hotstar
+platforms: 
+- hotstar
 platforms_weight: 20
 ---
 

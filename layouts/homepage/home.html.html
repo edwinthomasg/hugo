@@ -2,3 +2,99 @@ This is home layout with second most higher priority..
 <h2>{{.Type}}</h2>
 {{.Content}}
 {{partial "by-field" .}}
+<hr>
+<ul>
+    {{range .Site.Taxonomies.platforms}}
+   <li><a href="{{.Page.Permalink}}">{{.Page.Title}}</a></li> 
+    {{end}}
+</ul>
+
+<hr>
+
+<ul>
+    {{range $term,$taxonomy := .Site.Taxonomies }}
+      {{$path := (printf "/%s" $term)}}
+      <li><a href="{{$path}}">{{$term}}</a></li>
+      <ul>
+        {{range $key,$value := $taxonomy}}
+         <li>
+            {{$key}}
+         </li>
+         <ul>
+            {{range $value}}
+            <li><a href="{{.Page.Permalink}}">{{.Page.Title}}</a></li>
+          {{end}}
+         </ul>
+        {{end}}
+      </ul>
+    {{end}}
+</ul>
+
+<hr>
+{{with .Site.GetPage "/genre"}}
+  {{ with .GetPage "billa.md"}}
+    {{.Content}}
+  {{end}}
+{{end}}
+<hr>
+{{with .GetPage "/genre/billa.md"}}
+ <h2>{{.Title}}</h2>
+{{end}}
+
+<hr>
+<!--List only the terms in specified taxonomy-->
+{{$taxonomy := "platforms"}}
+{{$path := printf "/%s" $taxonomy }}
+{{with $.Site.GetPage $path}}
+  {{range .Pages}}
+    <a href="{{.Permalink}}">{{.Title}}</a>
+  {{end}}
+{{end}}
+
+<hr>
+<!--Grouping by section-->
+<ul>
+    {{range $grp := .Site.Pages.GroupBy "Section"}}
+    {{with .Key}}
+      <li>{{.}}</li>
+     <ul>
+        {{range $grp.Pages.ByTitle}}
+        <li><a href="">{{.Title}}</a></li>
+       {{.Date.Format "Mon ,2 Jan , 2006"}}}
+      {{end}}
+     </ul>
+    {{end}}
+
+  {{end}}
+</ul>
+
+<hr>
+<!--Grouping by custom param-->
+{{range .Site.Pages.GroupByParam "groupingParam"}}
+    {{range .Pages}} 
+      {{.Title}}
+    {{end}}
+{{end}}
+<hr>
+<!--Group by date-->
+{{.Site.Pages.GroupByDate "2006-01"}}
+{{range .Site.Pages.GroupByDate "2006-01" "desc"}}
+ <h3>{{.Key}}</h3>
+ {{range .Pages}}
+ <p>{{.Title}}</p>
+ {{end}}
+{{end}}
+<hr>
+<!--Ordering and grouping-->
+<!--Group by month-->
+{{range $index,$pages := .Site.Pages.GroupByDate "2006-01" "asc"}}
+  <h2>Group {{add $index 1}} : </h2>
+  <h4>{{.Key}}</h4>
+  <ul>
+   {{range .Pages.ByTitle}}
+     {{if eq .Kind "page"}}
+     <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+     {{end}}
+   {{end}}
+  </ul>
+{{end}}

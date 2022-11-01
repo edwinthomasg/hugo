@@ -7,6 +7,7 @@ imgurl: /img/charlie.jpg
 platforms: 
 - netflix
 - sonyliv
+groupingParam: group
 ---
 
 **INTRODUCTION :**  

@@ -1,3 +1,6 @@
 {{define "content"}}
 This is section layout for movie type with high priority
+{{range .Pages}}
+    {{.Render "summary"}}
+{{end}}
 {{end}}
