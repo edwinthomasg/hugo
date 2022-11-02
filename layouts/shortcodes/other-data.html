@@ -1,0 +1,6 @@
+{{with .Get "markdown"}}
+{{readFile ($.Get "filePath") | markdownify}}
+{{else}}
+{{readFile ($.Get "filePath")}}
+{{end}}
+

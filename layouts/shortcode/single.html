@@ -1,0 +1,9 @@
+{{define "demo"}}
+   <h4>Title - {{.Title}} : </h4>
+   {{.Content}}
+   <br>
+   <h2>Image loaded in single page</h2>
+   <img src="/img/hugo.png" alt="" style="width: 400px; height: 400px">
+   <h3>Does this page contains inner-demo shortcode : {{.HasShortcode "inner-demo"}}</h3>
+{{end}}
+

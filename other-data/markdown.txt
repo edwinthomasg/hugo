@@ -1,0 +1,7 @@
+**Bold Text**
+***Italic bold text***
+# Heading 1
+## Heading 2
+This is a paragraph.  
+This is a paragraph line 2.
+[link](https://www.google.com)

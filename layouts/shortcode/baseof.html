@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{.Title}}</title>
+</head>
+<body>
+    <header>
+        <p style="text-align: center; background-color: gray; color: black; padding: 3px;">Shortcode Demo</p>
+    </header>
+    <main>
+        {{if .IsSection}}
+           {{block "main" .}}
+           {{end}}
+        {{else}}
+           {{block "demo" .}}
+           {{end}}
+        {{end}}
+    </main>
+</body>
+</html>

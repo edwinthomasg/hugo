@@ -1,0 +1,9 @@
+{{with .Get 1}}
+  <h2>{{$.Get 0}}</h2>
+  {{$.Params}}
+{{end}}
+{{.Page.Params.Title}}
+<br>
+{{.Site.Params}}
+<br>
+{{.Page.Site.Params}}

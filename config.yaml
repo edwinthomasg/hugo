@@ -27,3 +27,8 @@ markup:
      endLevel: 6
      startLevel: 1
 disableLiveReload: false
+relativeURLs: true
+enableInlineShortcodes: true
+
+
+

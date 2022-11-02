@@ -1,0 +1,7 @@
+<p>From child shortcode : </p>
+{{.Get "src"}}
+<p>Params from parent shortcode</p>
+<figure>
+    <img src="{{.Get "src"}}" alt="">
+    <figcaption>{{.Parent.Get "caption"}}</figcaption>
+</figure>

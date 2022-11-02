@@ -1,0 +1,8 @@
+{{define "main"}}
+  <h4>Content for the page is given below :</h4>
+  <p>{{.Summary}}</p>
+  Click here for demo
+  {{range .Pages}}
+    <a href="{{.RelPermalink}}">{{.Name}}</a>
+  {{end}}
+{{end}}

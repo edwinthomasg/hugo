@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+   {{with .Get "display"}}
+     <h2>{{$.Get "name"}}</h2>
+   {{else}}
+     {{errorf "cant be displayed due to missing params : %s" .Position}}
+   {{end}}
+   {{.Params}} <br>
+   {{$.Params}} <br>
+   {{$.Page}}
+</body>
+</html>

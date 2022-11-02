@@ -1,0 +1,12 @@
+{{if .IsNamedParams}}
+  <h2>Named Params</h2>
+  {if and (.Get "picHeader") (.Get "location") }}
+<figure>
+  <img src="{{.Get "location"}}" alt="{{.Get "altText"}}" style="height: {{.Get
+  "height"}} ;width: {{.Get "width"}}">
+  <figcaption>{{.Get "picHeader"}}</figcaption>
+</figure>
+{{else}}
+ <h2>Postional params</h2>
+ <img src="{{.Get 0}}" alt="{{.Get 1}}">
+{{end}}
