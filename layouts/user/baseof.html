@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="{{.Site.Params.custom_css | absURL}}">
+</head>
+<body>
+    {{ if .IsSection }}
+    <header class="user-header">
+        {{block "head" .}}
+        {{end}}
+    </header>
+    {{block "test-content" .}}
+    {{end}}
+    {{end}}
+    
+    {{ block "page-content" .}}
+    {{end}}
+</body>
+</html>

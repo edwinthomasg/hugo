@@ -22,6 +22,7 @@ params:
   developer: edwin
   team: lamp
   alterlink: "help desk"
+  custom_css: "css/style.css"
 markup:
   tableOfContents:
      endLevel: 6
@@ -29,6 +30,21 @@ markup:
 disableLiveReload: false
 relativeURLs: true
 enableInlineShortcodes: true
-
-
+sectionPagesMenu : main
+menu:
+ user_nav:
+  - identifier: other
+    name: others
+    weight: 4
+    url: /platforms
+  - identifier: help
+    name: help
+    parent: other
+    url: /platforms/hotstar
+  - identifier: query
+    name: query
+    url: /platforms/netflix
+    parent: other
+paginate: 3
+enableGitInfo: true
 

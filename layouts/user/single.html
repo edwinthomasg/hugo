@@ -1,0 +1,25 @@
+{{define "page-content"}}
+  {{$currentPage := .}}
+  <p>{{.Content}}</p>
+  <hr>
+  <h3>File Variables</h3>
+   File Path : {{.File.Path}} - relative path of the page
+   <br>
+   File Name : {{.File.LogicalName}}
+   <br>
+   Translational Base name : {{.File.TranslationBaseName}} - without extensions or optional language identifier incasee of eg: demo.en.md returns demo alone except en lang and extension md
+   <br>
+   {{.File.ContentBaseName}}
+   <br>
+   Base File Name
+   {{.File.BaseFileName}} - only the file name without extension
+   <br>
+   Extension :
+   {{.File.Ext}} - only the extension
+   <br>
+   File Directory :
+   {{.File.Dir}} - returns the relative path of directory from content
+   <br>
+   File Unique Id :
+   {{.File.UniqueID}}
+{{end}}

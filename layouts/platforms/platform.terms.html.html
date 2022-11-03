@@ -29,3 +29,34 @@
  {{.Count}}
 {{end}}
 </ul>
+
+<hr>
+<h2>Taxonomy Variables</h2>
+Singular of taxonomy :
+{{.Data.Singular}}
+<br>
+Plural of taxonomy : 
+{{.Data.Plural}}
+<br>
+Taxonomy terms :
+{{range $key,$value := .Data.Terms}}
+  {{$key}}
+{{end}}
+<br>
+In alphabetical order :
+Taxonomy terms :
+{{range $key,$value := .Data.Terms}}
+  {{$key}}
+{{end}}
+<br>
+In count order :
+<ul>
+  {{range .Data.Terms.ByCount}}
+  <li>{{.Page.Title}}</li>
+  <ul>
+    {{range .Pages}}
+    <li>{{.Title}}</li>
+    {{end}}
+  </ul>
+{{end}}
+</ul>

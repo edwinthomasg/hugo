@@ -3,4 +3,15 @@ This is section layout for movie type with high priority
 {{range .Pages}}
     {{.Render "summary"}}
 {{end}}
+<hr>
+<h2>Paginator</h2>
+{{range .Paginator.Pages}}
+  <h3>{{.Title}}</h3>
 {{end}}
+<hr>
+{{range (.Paginate (first 3 .Pages.ByTitle)).Pages}}
+  <h3>{{.Title}}</h3>
+{{end}}
+
+{{end}}
+

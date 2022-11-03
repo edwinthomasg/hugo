@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: rgb(187, 179, 175);
+}
+nav{
+  float: right;
+  margin-top: 10px;
+}
+.nav-list{
+  display: inline;
+  margin-right: 10px;
+}
+a.menu{
+  color: goldenrod;
+  font-size: larger;
+  text-decoration: none;
+}
+a.sub{
+color:green
+}
+.user-header{
+  background-color: black;
+  height: 60px;
+}

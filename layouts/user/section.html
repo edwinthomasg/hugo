@@ -1,0 +1,58 @@
+{{define "head"}}
+<nav>
+  <ul>
+    {{range .Site.Menus.user_nav.ByWeight}}
+    {{if .HasChildren}}
+    <br>
+    <li class="nav-list"><a href="{{.URL}}" class="menu" style="color: red">{{.Name}} -</a></li>
+    <ul style="display: inline;">
+        {{range .Children}}
+          <li class="nav-list"><a href="{{.URL}}" class="sub">{{.Name}}</a></li>
+        {{end}}
+    </ul>
+    {{else}}
+    <li class="nav-list"><a href="{{.URL}}" class="menu">{{.Name}}</a></li>
+    {{end}}
+    {{end}}
+  </ul>
+</nav>
+<!-- <nav class="sidebar-nav">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main.ByName }}
+    <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    <br>
+    {{ end }}
+</nav> -->
+{{end}}
+
+{{define "test-content"}}
+{{$currentPage := .}}
+<ul>
+    {{range .Site.Menus.user_nav.ByWeight}}
+    Url : {{.URL}}
+    <br>
+    Menu : {{.Menu}}
+    <br>
+    Name : {{.Name}}
+    <br>
+    Page : {{.Page}}
+    <br>
+    Identifier : {{.Identifier}}
+    <br>
+    Parent: {{.Parent}}
+    <br>
+    Pre Element : {{.Pre}}
+    <br>
+    Post Element : {{.Post}}
+    <hr>
+    {{end}}
+  </ul>
+  {{range .Site.Menus.user_nav}}
+  {{$currentPage}}
+  <p style="margin-top: 10px">{{$currentPage.HasMenuCurrent "user_nav" .}}</p>
+  Has Key : {{.KeyName}} - returns the identifier if not specified returns the name
+  {{end}}
+  
+{{end}}
+
+
