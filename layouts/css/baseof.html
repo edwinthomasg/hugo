@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{.Title}}</title>
+    <!-- {{ $scss := resources.Get "css/style.scss" }}
+    {{ $style := $scss | resources.ToCSS }}
+    <link rel="stylesheet" href="{{$style}}"> -->
+</head>
+<body>
+    {{block "section-content" .}}
+    {{end}}
+    {{block "page-content" .}}
+    {{end}}
+    <!-- {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) "includePaths" (slice "node_modules/myscss")) }}
+{{ $style := resources.Get "css/style.scss" | resources.ToCSS $options }} -->
+</body>
+</html>

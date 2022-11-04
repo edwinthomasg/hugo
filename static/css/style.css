@@ -25,3 +25,9 @@ color:green
   background-color: black;
   height: 60px;
 }
+a.sidebar-nav-item.active{
+  color: palevioletred
+}
+nav.sidebar-nav{
+  float: left;
+}

@@ -1,0 +1,11 @@
+{{define "page-content"}}
+{{.Content}}
+<hr>
+{{$current := .}}
+{{range .Site.Menus.menusample}}
+    Menu Entry : {{.}} <br>
+    {{.Name}} :
+   {{$current.IsMenuCurrent "menusample" .}}
+   <hr>
+{{end}}
+{{end}}

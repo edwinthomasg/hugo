@@ -104,3 +104,16 @@ This is home layout with second most higher priority..
 <hr>
 {{ readDir "/content/movie" }}
 <hr>
+{{range .Data.Pages}}
+  {{.Title}}
+{{end}}
+
+<hr>
+{{$img := resources.Get "hugo.png"}}
+<img src="{{$img.Permalink}}" alt="hugo image">
+{{$remoteImg := resources.GetRemote "https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg"}}
+{{$remoteImg}}
+<img src="{{$remoteImg}}" alt="">
+
+
+

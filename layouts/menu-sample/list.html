@@ -1,0 +1,19 @@
+{{define "section-content"}}
+   Section Content : {{.Content}}
+   <hr>
+   <h3>Internal Templates :</h3>
+{{ $paginator := .Paginate (where .Site.Pages "Kind" "section") }}
+Paginator : {{$paginator}}
+<br>
+{{ template "_internal/pagination.html" . }}
+{{ range $paginator.Pages.ByTitle }}
+   <a href="{{.Permalink}}">{{ .Title }}</a>
+{{ end }}
+{{ $paginator := .Paginate (where .Site.Pages "Type" "platforms") }}
+Paginator : {{$paginator}}
+<br>
+{{ template "_internal/pagination.html" . }}
+{{ range $paginator.Pages.ByTitle }}
+   <a href="{{.Permalink}}">{{ .Title }}</a>
+{{ end }}
+{{end}}

@@ -52,7 +52,17 @@
   <p style="margin-top: 10px">{{$currentPage.HasMenuCurrent "user_nav" .}}</p>
   Has Key : {{.KeyName}} - returns the identifier if not specified returns the name
   {{end}}
-  
+  <hr>
+  <nav class="sidebar-nav">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.user_nav}}
+    <p>Menu Entry : {{.}}</p>
+    <p><b>Is Menu Current : </b>{{$currentPage}} - {{$currentPage.IsMenuCurrent "user_nav" .}}</p>
+    <p><b>Has Menu Current : </b>{{$currentPage.HasMenuCurrent "user_nav" .}}</p>
+    <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "user_nav" .) ($currentPage.HasMenuCurrent "user_nav" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    <hr>
+    {{ end }}
+</nav>
 {{end}}
 
 

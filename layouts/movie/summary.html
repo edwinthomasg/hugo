@@ -1,1 +1,14 @@
 <h3>Summary belongs to : {{.Title}}</h3>
+Git Details :
+{{.GitInfo}}
+<br>Author name :
+{{.GitInfo.AuthorName}}
+<br>
+Author Email:
+{{.GitInfo.AuthorEmail}}
+<br>
+Author Date:
+{{.GitInfo.AuthorDate.Format "Jan 2 2006"}}
+<br>
+Commit Hash :
+{{.GitInfo.Hash}}

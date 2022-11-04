@@ -1,0 +1,15 @@
+$textColor : red;
+$textSize : 16px;
+$linkColor : blue;
+
+body{
+    font-size: $textSize;
+}
+
+a{
+    color: $linkColor;
+}
+
+p{
+    color: $textColor;
+}
