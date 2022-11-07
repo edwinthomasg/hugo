@@ -2,11 +2,24 @@
 <html>
 <head>
     <title>{{.Title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{.Site.Params.cutom_nav_css | absURL}}">
 </head>
 <body>
-    <p>base layout</p>
+    <p>base layout inside default</p>
       {{block "main" .}}
       {{end}}
     <p>base end</p>
+    <!--Importing js file from asset folder-->
+    
+    </script>
+    {{ $source1 := resources.Get "js/bundle1.js" | minify }}
+    {{ $source2 := resources.Get "js/bundle2.js" | minify }}
+    <script src="{{$source1.Permalink}}"></script>
+    <script src="{{$source2.Permalink}}"></script>
+    {{$bundled := slice $source1 $source2 | resources.Concat "js/task.js"}}
+    {{$bundled}}
+
+    <script src="{{$jsResource.Permalink}}"></script>
 </body>
 </html>

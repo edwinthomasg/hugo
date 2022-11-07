@@ -1,0 +1,9 @@
+This is a section page for tax type
+<br>
+
+
+{{ range (.Paginate (last 20 .Site.Pages)).Pages }}
+  {{.Title}} - {{.Kind}}
+{{end}}
+{{ template "_internal/pagination.html" .}}
+

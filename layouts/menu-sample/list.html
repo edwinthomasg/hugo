@@ -3,17 +3,18 @@
    <hr>
    <h3>Internal Templates :</h3>
 {{ $paginator := .Paginate (where .Site.Pages "Kind" "section") }}
-Paginator : {{$paginator}}
-<br>
-{{ template "_internal/pagination.html" . }}
 {{ range $paginator.Pages.ByTitle }}
    <a href="{{.Permalink}}">{{ .Title }}</a>
 {{ end }}
-{{ $paginator := .Paginate (where .Site.Pages "Type" "platforms") }}
-Paginator : {{$paginator}}
+{{ template "_internal/pagination.html" . }}
+
+{{ $platformPaginator := .Paginate (where .Site.Pages "Kind" "term") }}
+platformPaginator : {{$platformPaginator}}
 <br>
 {{ template "_internal/pagination.html" . }}
-{{ range $paginator.Pages.ByTitle }}
-   <a href="{{.Permalink}}">{{ .Title }}</a>
+{{ range $platformPaginator.Pages.ByTitle }}
+  
+   <p>{{.Title}} - {{.Type}}</p>
+   <!-- <a href="{{.Permalink}}">{{ .Title }}</a> -->
 {{ end }}
 {{end}}

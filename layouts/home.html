@@ -1,1 +1,10 @@
 This is home page with priority after index file
+
+<hr>
+{{$langPage := .GetPage "/lang"}}
+{{$langPage.Pages}}
+{{$paginator := .Paginate $langPage.Pages}}
+{{range $paginator.Pages}}
+<a href="{{.Permalink}}">{{.Title}}</a>
+{{end}}
+{{ template "_internal/pagination.html" .}}

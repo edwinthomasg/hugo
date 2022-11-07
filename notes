@@ -232,4 +232,8 @@ Taxonomy lookup order :
      taxonomy.html
      list.html
 
+For extended version:
+# <!-- wget https://github.com/gohugoio/hugo/releases/download/v0.94.0/hugo_extended_0.94.0_Linux-64bit.deb
+# sudo dpkg -i hugo_extended_0.94.0_Linux-64bit.deb -->
+
   

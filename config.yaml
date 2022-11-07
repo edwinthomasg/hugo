@@ -23,6 +23,8 @@ params:
   team: lamp
   alterlink: "help desk"
   custom_css: "css/style.css"
+  cutom_nav_css: "css/custom-nav.css"
+  custom_js: "js/task.js"
 markup:
   tableOfContents:
      endLevel: 6
@@ -37,7 +39,8 @@ menu:
      pageRef: download
      weight: 4
  
-paginate: 2
+paginate: 5
+paginatePath: page
 enableGitInfo: true
 
 

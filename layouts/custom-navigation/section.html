@@ -1,0 +1,24 @@
+This is the section page for custom navigation.
+<hr />
+{{$paginator := .Paginate ( where .Site.Pages "Kind" "section")}}
+<b>Paginator : </b>{{$paginator}} 
+<b>Paginator pages : </b>{{$paginator.Pages}}
+
+<ul>
+  {{range $paginator.Pages}}
+  <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+  <p>Page Number : <b>{{$paginator.PageNumber}}</b></p>
+  <p>URL : <b>{{$paginator.URL}}</b></p>
+  <p>Number of elements : <b>{{$paginator.NumberOfElements}}</b></p>
+  <p>Has Prev Page : <b>{{$paginator.HasPrev}}</b></p>
+  <p>The previous page : <b>{{$paginator.Prev}}</b></p>
+  <p>Has Next Page : <b>{{$paginator.HasNext}}</b></p>
+  <p>The Next page : <b>{{$paginator.Next}}</b></p>
+  <p>The pager of first page : <b>{{$paginator.First}}</b></p>
+  <p>The pager of last page : <b>{{$paginator.Last}}</b></p>
+  <p>The list of pagers : <b>{{$paginator.Pagers}}</b></p>
+  <p>The total pages : <b>{{$paginator.TotalPages}}</b></p>
+  <p>The total number of elements : <b>{{$paginator.TotalNumberOfElements}}</b></p>
+  {{end}}
+  {{ template "_internal/pagination.html" .}}
+</ul>

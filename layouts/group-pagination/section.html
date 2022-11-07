@@ -1,0 +1,10 @@
+This is a list page for group pagination.
+
+<ul>
+  {{range (.Paginate (.Site.Pages.GroupByParam "groupingParam") 3).PageGroups }}
+     {{range .Pages}}
+     <li><a href="{[.RelPermalink}}">{{.Name}}</a></li>
+     {{end}}
+  {{end}}
+  {{template "_internal/pagination.html" .}}
+</ul>

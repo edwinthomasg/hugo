@@ -3,13 +3,23 @@ $textSize : 16px;
 $linkColor : blue;
 
 body{
-    font-size: $textSize;
+    font-size:      $textSize;
 }
+
 
 a{
-    color: $linkColor;
+    color:     $linkColor;
 }
 
+
 p{
-    color: $textColor;
+    color:    $textColor;
 }
+
+
+
+li{  
+    display: inline-block;  
+}
+
+// simply a comments goes here
