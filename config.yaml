@@ -42,5 +42,7 @@ menu:
 paginate: 5
 paginatePath: page
 enableGitInfo: true
-
-
+rssLimit: 20
+author:
+ - name: joey
+ - email: joey@gmail.com

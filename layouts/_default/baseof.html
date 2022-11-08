@@ -4,22 +4,44 @@
     <title>{{.Title}}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{.Site.Params.cutom_nav_css | absURL}}">
+    {{ range .AlternativeOutputFormats }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
 </head>
 <body>
     <p>base layout inside default</p>
       {{block "main" .}}
       {{end}}
+      <hr>
+      {{ $stringArray := slice "edwin" "akash" "saju" "karthi" "vasi" "rannith" }}
+      {{$stringArray}}
+      {{ delimit ($stringArray) ", " }}
+      
     <p>base end</p>
+    <hr>
+    {{ range .AlternativeOutputFormats }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     <!--Importing js file from asset folder-->
     
     </script>
     {{ $source1 := resources.Get "js/bundle1.js" | minify }}
     {{ $source2 := resources.Get "js/bundle2.js" | minify }}
-    <script src="{{$source1.Permalink}}"></script>
-    <script src="{{$source2.Permalink}}"></script>
-    {{$bundled := slice $source1 $source2 | resources.Concat "js/task.js"}}
-    {{$bundled}}
-
-    <script src="{{$jsResource.Permalink}}"></script>
+    <script src="{{/*$source1.Permalink*/}}"></script>
+    <script src="{{/*$source2.Permalink*/}}"></script>
+    {{ $res := delimit (slice $source1 $source2) ", "}}
+    {{$res}}
+    <br>
+    Sass Temp :
+    {{/*$sassTemp := resources.Get "css/resource.scss"*/}}
+    {{/*$style := $sassTemp | resources.ExecuteAsTemplate "style.scss" . | resources.ToCSS*/}}
+    {{/*$style*/}}
+    <hr>
+    {{$bundled := (slice $source1 $source2) | resources.Concat "js/task.js" | resources.Fingerprint "sha512"}}
+    After Bundling :
+    {{$bundled.Permalink}}
+    <script src="{{$bundled.Permalink}}" integrity="{{ $bundled.Data.Integrity}}"></script>
 </body>
 </html>
+
+
