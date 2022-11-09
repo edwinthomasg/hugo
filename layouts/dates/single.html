@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{.Title}}</title>
+</head>
+<body>
+    Single page : Date functions
+
+{{.Content}}
+AddDate - returns time by accepting arguments in order y m d (numbers)
+{{$date := "2000-02-23" | time.AsTime}}
+<h3>Original Date : </h3><span>{{$date}}</span>
+<h3>Adding one year to the date : </h3><span>{{$date.AddDate 1 0 0 | time.Format "2006-01-02"}}</span>
+<h3>Subtracting one  year to the date : </h3><span>{{$date.AddDate -1 0 0 | time.Format "2006-01-02"}}</span>
+<h3>Adding 7 days to feb month : </h3><span>{{$date.AddDate 0 0 7 | time.Format "2006-01-02" }}</span>
+<h3>Adding month or year when resulting day is not there.</h3>
+{{$date := "2022-01-31" | time.AsTime}}
+<span>Original date : {{$date | time.Format "2006-01-02"}}</span>
+<br>
+<span>Resulted date : {{$date.AddDate 0 1 0 | time.Format "2006-01-02" }}</span>
+<hr>
+
+<h3>Format :</h3> - Can format the date,publish date,last mod
+<p>{{.Date.Format "Jan 2006"}}</p>
+<p>{{.Date.Format "2006"}}</p>
+<p>{{.Date.Format "Mon Jan 2006 02"}}</p>
+<p>{{.Date.Format "02"}}</p>
+<p>{{.Date.Format "Jan"}}</p>
+
+Cardinal numbers and Ordinal abbrev:
+{{$customDate := "2022-11-30" | time.AsTime}}
+{{$customDate.Day}}
+{{if in (slice 1 21 31) $customDate.Day}} st {{else if in (slice 2 22) $customDate.Day}} nd {{else if in (slice 3 23) $customDate.Day}} rd {{else}} th {{end}}
+of {{$customDate.Format "Jan 2006"}}
+<h3>UTC : </h3>
+{{ dateFormat "02 Jan 06 15:04 MST" now.UTC }}
+<h3>Local : </h3>
+{{ dateFormat "02 Jan 06 15:04 MST" now.Local }}
+
+<h3>Time to seconds:</h3>
+{{.Date.Unix}}
+{{.Date.UnixMilli}}
+</body>
+</html>

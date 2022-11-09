@@ -231,6 +231,40 @@ Taxonomy lookup order :
      terms.html
      taxonomy.html
      list.html
+  
+Functions:
+1.AddDate - y m d in numbers to add or sub in args
+2.Format - to format the date to string
+3.Get - to get params for usage of shortcodes
+4.GetPage - returns a page of specified path
+  Page and Site has access to it page relatively find the files
+5.HasMenuCurrent - checks whether the children menu entries has been containing the title same as current page
+6.IsMenuCurrent - checks whether the current menu item is same as page title
+7.Param - Param key , order = content fm -> site config
+8.Render - used to render template wherever is needed from the location
+9.RenderString - markdown string to html
+10.Unix - converts date to seconds
+11.absURL - full link with the baseURL
+12.relURL - link except baseurl domain part
+13.apply - Returns a new slice by applying function to every elements for a collection or slice to passed as args to apply
+14.slice - returns an array by including the params passed
+15.after - returns elements after the speicfied param from an array
+16.anchorize - takes string and format it what default markdown handler doesnt
+17.append - append a slice or element to the existing slice
+18.base64 - used to encode and decode
+19.chomp - remove the trailing new lines
+20.getJSON - to fetch remote json and local files
+21.complement - will return elements that are not presented in a source collection
+   eg: to display pages that are not from movie and lang section from regular pages 
+22.countrunes - will count the number of letters other than whitespaces used in cjk lang
+23.cond - acts as conditional operator
+24.countwords - returns number of words in a given sentence
+25.default - sets default value when it is not provided
+26.delimit - loops through given slice or map and returns a string if delimiter is provided
+27.dict - used to create dictionary from key value pairs ..used in partial template to pass multiple params
+28.emojify - string to emojify
+29.errorf,warnf - in console
+30.
 
 For extended version:
 # <!-- wget https://github.com/gohugoio/hugo/releases/download/v0.94.0/hugo_extended_0.94.0_Linux-64bit.deb

@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "myweb.com/web"
 languageCode: "en-us"
 title: "Movie times"
 theme: "PaperMod"
@@ -46,3 +46,7 @@ rssLimit: 20
 author:
  - name: joey
  - email: joey@gmail.com
+resources:
+ - src: "movie/java.jpg"
+enableEmoji: true
+ignoreErrors: my-custom-error

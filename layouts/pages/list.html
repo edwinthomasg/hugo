@@ -1,0 +1,9 @@
+List Page - Pages.
+<hr>
+{{range .Pages}}
+  <a href="{{.Permalink}}">{{.Title}}</a>
+{{end}}
+<hr>
+{{.Resources}}
+
+{{.Render "sample"}}

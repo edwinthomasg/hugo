@@ -1,0 +1,115 @@
+Single page : Page functions
+{{.Content}}
+Get Function:
+Both page and site has access to get the page.
+Page will relatively check for the list or section pages.
+{{$page := .GetPage "movie"}}
+<br>
+{{with $page}}
+  {{$actress := .GetPage "actress.md"}} {{/*Incase of site it will throw ambiguity*/}}
+  {{$actress}}
+{{end}}
+<br>
+Get resource from leaf bundle is not possible instead use resources :
+{{.GetPage "leaf/leaf.md"}}
+<br>
+{{resources.Get "movie/comedian.md"}}
+
+<hr>
+{{$tagsPage := .Site.GetPage "/tags"}}
+{{ range $term, $value := first 2 $tagsPage.Data.Terms.ByCount }}
+  <p>{{$value.Pages}}</p>
+{{end}}
+<hr>
+{{$moviePage := .GetPage "movie"}}
+{{range $moviePage.Resources}}
+  <p>{{.ResourceType}} - {{.Title}}</p>
+{{end}}
+<hr>
+<h3>Page will have resource type has page :</h3>
+{{.Page.ResourceType}}
+{{.Page.Permalink}}
+<hr>
+{{.Resources}}
+{{.Param "developer"}}
+
+{{.Render "sample"}}
+<hr>
+Render Markdown to html :
+<span>{{"**bold text**" | .RenderString (dict "display" "inline") }}</span>
+
+<hr>
+To Absurl :
+{{"/blog" | absURL}}
+<hr>
+To Relurl:
+{{"/blog" | relURL}}
+<hr>
+{{range apply .Params.socialMedia "markdownify" "."}}
+{{.}}
+{{end}}
+<hr>
+{{"**bold**" | markdownify}}
+
+<hr>
+{{.Content}}
+<hr>
+<h3>Appending : </h3>
+{{.Params.socialMedia | append "whatsapp"}}
+<h3>Appending slice : </h3>
+{{.Params.socialMedia | append (slice "whatsapp" "messenger")}}
+
+<hr>
+<h3>Base64 encoding and decoding :</h3>
+Kingmaker after encoding : {{"kingmaker" | base64Encode}} <br>
+a2luZ21ha2Vy after decoding : {{"a2luZ21ha2Vy" | base64Decode}}
+<br>
+Getting json data : 
+{{$jsonRes := getJSON "/data/dev.json"}}
+{{range $jsonRes}}
+   {{.age}}
+{{end}}
+<hr>
+Chomp:
+{{$actualMarkup := "<p>para text</p>\n"}}
+{{$actualMarkup}} -
+{{chomp $actualMarkup}}
+
+{{chomp "<p>Blockhead</p>\n"}}
+
+<hr>
+Complement :
+{{$fruits := slice "mango" "grape" "pine" "apple" "jack" "orange" "guava"}}
+{{$one := slice "mango" "grape"}}
+{{$two := slice "pine" "jack"}}
+{{$fruits | complement $one $two }}
+<hr>
+Conditional Operator:
+{{len (slice "c" "java")}}
+<br>
+{{len "edwin"}}
+<br>
+{{$name := "edwin"}}
+Name : {{cond (eq (len $name) 2) "name should me more than two letters" "accepted" }}
+<br>
+Countrunes:
+{{"Hello new language, 世界" | countrunes}}
+<br>
+Count words:
+{{"Hello World everyone" | countwords}}
+<br>
+Index:
+{{index .Params.socialMedia 3 | default "no elements" }}
+<br>
+Delimit :
+{{delimit .Params.socialMedia ", " ", and finally"}}
+<br>
+Emojify :
+{{emojify "Rcb :heart:"}}
+
+<!-- {{/*errorf "error"*/}} -->
+
+{{ erroridf "my-custom-error" "You should consider fixing this." }}
+
+{{ $related := site.RegularPages.RelatedIndices . "tags"  }}
+{{$related}}

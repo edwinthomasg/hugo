@@ -4,7 +4,7 @@ date: 2022-11-03T11:14:01+05:30
 draft: true
 menu:
   user_nav:
-    name: "posts"
+    name: "post"
     url: "/posts"
     weight: 2
 ---
