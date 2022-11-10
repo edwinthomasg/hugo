@@ -17,7 +17,6 @@ This page is going to highlight the html content.
     </body>
   </html>
 {{< /highlight >}}
-
 {{< parent caption="image caption from parent shortcode" >}}
   {{< child src="/img/hugo.png" >}}
 {{< /parent >}}

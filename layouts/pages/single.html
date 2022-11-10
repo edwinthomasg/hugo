@@ -1,4 +1,11 @@
-Single page : Page functions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{.Title}}</title>
+  {{hugo.Generator}}
+</head>
+<body>
+  Single page : Page functions
 {{.Content}}
 Get Function:
 Both page and site has access to get the page.
@@ -106,10 +113,203 @@ Delimit :
 <br>
 Emojify :
 {{emojify "Rcb :heart:"}}
-
 <!-- {{/*errorf "error"*/}} -->
-
 {{ erroridf "my-custom-error" "You should consider fixing this." }}
+<hr>
+{{os.FileExists "layouts/movie/list.html"}}
+<br>
+<h3>Find regex matched content from content file :</h3>
+<h4>Content :</h4>
+{{.Content}}
+<h3>Matched Result : </h3>
+{{ findRE "<h2 .*>.*</h2>" .Content }}
+<hr>
+<h3>String to float value : </h3>
+{{$floatString := "3.14"}}
+{{ float $floatString }}
+<hr>
+{{.Site.Title}}
+<h4>From env variable : </h4>
+{{os.Getenv "HUGO_TITLE"}}
+<hr>
+{{$newPage := .Site.RegularPages | first 10 | group "new"}}
+{{$olderPage := .Site.RegularPages | last 10 | group "last"}}
+{{$grouped := slice $newPage $olderPage }}
+{{range $grouped}}
+  <ul>
+    <li>{{.Key}}</li>
+    <ol>
+      {{range .Pages}}
+        <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+      {{end}}
+    </ol>
+  </ul>
+{{end}}
+<hr>
+<h3>List Only the movie pages using has prefix function :</h3>
+{{range (where .Site.Pages.ByTitle "Kind" "section")}}
+  
+  {{if (hasPrefix .Title "Movie")}}
+  <a href="{{.Permalink}}">{{.Title}}</a><br>
+  <ul>
+    {{range .Pages}}
+    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+    {{end}}
+  </ul>
+  {{end}}
+{{end}}
+<hr>
+{{$inputHtml := "<p>Input paragraph content here..</p>"}}
+{{transform.Highlight $inputHtml "html" }}
 
-{{ $related := site.RegularPages.RelatedIndices . "tags"  }}
-{{$related}}
+{{$inputJs := "console.log(\"Hello World\")" }}
+{{transform.Highlight $inputJs "js" "lineNos=true" "anchorLineNos=true" "lineNoStart=2" "tabWidth=8"}}
+
+<hr>
+{{$secretContent := "This was my secret message."}}
+{{$secretContent}} is hashed as
+<b>{{ hmac "sha256" "some secured key" $secretContent }}</b>
+
+<hr>
+{{$html := "Hugo & Caddy > WordPress & Apache" }}
+{{htmlEscape $html}}
+<br>
+{{$htmlString := "Hugo &amp; Caddy &gt; WordPress &amp; Apach"}}
+{{htmlUnescape $htmlString}}
+<hr>
+<h3>Hugo Version : </h3>
+{{hugo.Version}}
+<hr>
+{{hugo.Environment}}
+<hr>
+{{hugo.BuildDate}}
+<br>
+Is it extended hugo binary ?
+{{hugo.IsExtended}}
+<hr>
+Is it in a production environment ?
+{{hugo.IsProduction}}
+<hr>
+<h3>Hugo Dependencies : </h3>
+{{range $index,$element := hugo.Deps}} 
+  <h3>Path : {{$element.Path}}</h3> 
+  <h3>{{with $element.Owner}}{{$element.Path}}{{else}}No Owner{{end}}</h3>
+{{end}}
+<hr>
+Humanize the content :
+{{humanize "my-random-text"}}
+{{humanize "100"}}year
+<hr>
+In Operator : 
+{{in "this is a paragraph" "a paragraph"}}
+{{with in (slice "insta" "twitter" "wap") "twitter" }}
+ I am there on twitter
+ {{else}}
+  Not there on social media
+{{end}}
+<hr>
+Index experiment :
+{{index $.Params.socialMedia 2}}
+{{$players := (dict "team" "india" "total" "11" "players" (slice "virat" "sky" "pant"))}}
+{{index $players "players" 0}}
+<hr>
+{{ int "10" }}
+{{ int ("0987" | strings.TrimLeft "0")}}
+<hr>
+{{$array1 := slice "hello"  "hi" "everyone" "world"}}
+{{$array2 := slice "hello" "noone" "world" "hi"}}
+{{intersect $array1 $array2}}
+<hr>
+{{.Site.RegularPages}}
+{{$pages := where .Site.RegularPages "Type" "not in" (slice "movie" "lang")}}
+{{$pages}}
+{{$pages :=  union $pages (where .Site.RegularPages "Params.Draft" true)}}
+{{$pages}}
+
+{{$pages :=  intersect $pages (where .Site.RegularPages "Params.Draft" true)}}
+{{$pages}}
+<hr>
+Check the param is set or not:
+{{.Params.socialMedia}}
+{{isset .Params "socialmedia"}}
+<hr>
+{{$user := dict "name" "edwin" "age" 21 "role" "developer"}}
+{{$user | jsonify (dict "indent" " " "prefix" "  ")}}
+<hr>
+{{lower .Title }}
+{{upper .Title}}
+{{range .Params.socialMedia}}
+  {{. | markdownify}}
+{{end}}
+<hr>
+{{merge (dict "name" "edwin" "age" 21) (dict "name" "edie" "role" "dev")}}
+<hr>
+{{now | time.AsTime}}
+<br>
+{{.Date.Format "2006-01-02"}}
+<br>
+{{with os.Stat "content"}}
+  {{.IsDir}}
+  {{.Size}}
+{{end}}
+<hr>
+Path Base:
+{{ path.Base (replace (.Site.GetPage "comedian.md") ")" "")}}
+<br>
+{{path.Clean "/a//b/c"}}
+{{hasPrefix "mr edie" "mr "}}
+<br>
+{{path.Dir .File.Path}}
+<br>
+{{path.Ext .File.Path}}
+<br>
+{{$newPath := path.Join "web" "pages" "page1.md" }}
+{{$newPath}}
+<br>
+{{$splitedPath := path.Split $newPath}}
+Dir : {{$splitedPath.Dir}} <br>
+Filename : {{$splitedPath.File}}
+<hr>
+{{$anchor := "<a href=\"#\">click here</a>"}}
+{{$anchor | plainify}}
+<hr>
+{{.Title | pluralize | singularize}}
+ <hr>
+ {{ print (slice 1 2 3)}}
+ <hr>
+ {{ printf "%s" .Title}}
+ <hr>
+ <a href="amazon.com/product?{{(querify "category" "shirt" "size" "m") | safeURL}} ">Product</a>
+ <a href="https://www.google.com?{{ (querify "q" "test" "page" 3) | safeURL }}">Search</a>
+ <br>
+ {{range readDir "content"}}
+ {{.Name}} - {{.IsDir}} <br>
+ {{end}}
+ <br>
+ {{readFile "layouts/_default/baseof.html"}}
+ <hr>
+ {{ ref . "comedian" }}
+ <hr>
+ {{ reflect.IsMap (dict "name" "edwin" "age" 21)}}
+ Replace:
+ {{ replace "chiiku" "i" "e" }} <br>
+ Replace with limit:
+ {{ replace "chiiku" "i" "e" 1}}
+<br>
+ {{ replaceRE "a+b" "X" "aabbaabbab" }}
+ <br>
+ {{.Params.style}}
+ <p style="{{ .Params.style | safeCSS }}">Text here havig css from content file</p>
+
+ {{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<ul>
+ {{ range . }}
+ <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+ {{ end }}
+</ul>
+{{ end }}
+{{ $related := site.RegularPages.Related . }}
+{{ $related := site.RegularPages.RelatedTo ( keyVals "tags" "categories" "platforms")  ( keyVals "date" .Date ) }}
+</body>
+</html>

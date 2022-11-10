@@ -264,8 +264,37 @@ Functions:
 27.dict - used to create dictionary from key value pairs ..used in partial template to pass multiple params
 28.emojify - string to emojify
 29.errorf,warnf - in console
-30.
-
+30.os.FileExists - checks the path from root of the project directory if not found checks in the content directory
+31.findRE - used to match regex pattern and return the string
+32.First - returns the number of elements from specified args passed to first function
+33.float - strings to float value
+34.Getenv - used to fetch environment variables value.
+35.group -   groups list of pages or slice to one key.
+36.hasPrefix - accepts argument as string and check if that content has the pattern specified.
+37.highlight - (code to highlight ) (language) (options if any)
+38.hmac - to hash the given secured message
+39.htmlEscape - returns a string with html reserved.
+40.htmlUnescape - returns a string with html unreserved
+41.in - checks the element is present in an array or substring present in string
+42.index - looks for index or keys in the collection or data passed to it
+43.int - it will convert string to integer value
+44.union - returns both the matched elements and uncommon elements without duplication
+45.intersect - returns the common elements
+46.isset - checks the param is set or not
+47.Jsonify - object to json object
+48.len - returns length of an array or string length
+49.lower - lowercase the content
+50.merge - applied for merging two or more maps
+51.now - returns the current local time
+52.os stat - returns the stat of file path
+53.plainify - will convert html to plain text
+54.querify - making querystring to fetch response
+55.readDir path - returns the array of fileinfo
+56.reflect.IsMap - returns true if input is a map
+57.reflect.IsSlice - returns trur if input is a slice
+58.ref - ref . page returns the absolute link
+59.relRef - returns the relative link
+60.replace - replace the string by new occurence
 For extended version:
 # <!-- wget https://github.com/gohugoio/hugo/releases/download/v0.94.0/hugo_extended_0.94.0_Linux-64bit.deb
 # sudo dpkg -i hugo_extended_0.94.0_Linux-64bit.deb -->

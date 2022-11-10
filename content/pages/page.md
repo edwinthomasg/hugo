@@ -9,6 +9,7 @@ socialMedia:
 - "**bold**"
 - "***bolditalic***"
 - "*italic*"
+style: "color:red;"
 ---
 
 ## Page Function Heading
@@ -16,3 +17,5 @@ socialMedia:
 This page lists down all the page functions.
 
 I :heart: rcb
+
+## Page Function Heading 2
