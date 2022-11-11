@@ -301,15 +301,79 @@ Filename : {{$splitedPath.File}}
  {{.Params.style}}
  <p style="{{ .Params.style | safeCSS }}">Text here havig css from content file</p>
 
- {{ $related := .Site.RegularPages.Related . | first 5 }}
-{{ with $related }}
-<ul>
- {{ range . }}
- <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
- {{ end }}
-</ul>
-{{ end }}
-{{ $related := site.RegularPages.Related . }}
-{{ $related := site.RegularPages.RelatedTo ( keyVals "tags" "categories" "platforms")  ( keyVals "date" .Date ) }}
+ <a {{printf "href=%q" .Params.anchorref | safeHTMLAttr}}>Link here</a>
+ {{seq 10}}
+ <br>
+ {{seq 2 10}}
+ <br>
+ {{seq 1 2 5}}
+ <br>
+ {{range after 1  (seq 20)}}
+    {{.}}
+ {{end}}
+ <br>
+ {{shuffle (seq 20)}}
+ <br>
+ {{ slicestr "hello" 3}}
+ {{slicestr "hello" 0 2}}
+ <br>
+ {{$array := slice "tag3" "tag1" "tag2"}}
+ {{sort $array}}
+ <br>
+ {{sort $array "value" "desc"}}
+ <br>
+ {{$string := "hello,world,everyone"}}
+ {{split $string ","}}
+ <br>
+ Sub String count :
+ {{strings.Count "a" "javascript" }}
+ <br>
+ {{"aaabaab" | strings.Count "aaa"}}
+ <br>
+ {{"aaabaab" | strings.Count "aa"}}
+ <br>
+ Check whether it a md file :
+ {{strings.HasSuffix .File.Path ".md"}}
+ {{with (strings.HasSuffix .File.Path ".md")}}
+    It is a md file.
+ {{end}}
+ <br>
+ Repeat the string :
+ {{strings.Repeat 3 "edie"}}
+ <br>
+ Countrunes : exclude the whitespaces
+ {{countrunes "Hello, 世界"}}
+ <br>
+ Where as strings.RuneCount  includes whitespaces in count.
+ {{strings.RuneCount "Hello, 世界"}}
+ <br>
+ Strings trim left :
+ {{strings.TrimLeft "0" "056" | int}}
+ <br>
+ String trim right:
+ {{strings.TrimRight "e" "edieeee"}}
+ <br>
+ TrimPrefix:
+ {{strings.TrimPrefix "0" "0056"}}
+ <br>
+ TrimSuffix:
+ {{strings.TrimSuffix "s" "dogs"}}
+ <br>
+ {{intersect (slice 1 2 3 4) (slice 4 2 7 8)}}
+ {{ slice 1 2 3 4 5 6 | complement (slice 1 2 3 4) (slice 4 2 7 5 8)}}
+ <br>
+ {{substr "twitter" 1}}
+ <br>
+ {{substr "twitter" 0 4}}
+ <br>
+ {{substr "twitter" 0 -1}}
+ <br>
+ {{substr "twitter" -4 -3 }}
+ <br>
+ {{ slice 1 2 3 4 | symdiff (slice 1 2)}}
+ <br>
+ {{printf "<h2>The title of the page is %s</h2>" .Title | safeHTML}}
+ <br>
+ {{.Slug}}
 </body>
 </html>

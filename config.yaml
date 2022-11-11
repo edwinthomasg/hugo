@@ -50,3 +50,5 @@ resources:
  - src: "movie/java.jpg"
 enableEmoji: true
 ignoreErrors: my-custom-error
+enableRobotsTXT: true
+contentDir: cricket

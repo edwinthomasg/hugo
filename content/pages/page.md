@@ -10,6 +10,7 @@ socialMedia:
 - "***bolditalic***"
 - "*italic*"
 style: "color:red;"
+anchorRef: "irc://irc.freenode.net/#golang"
 ---
 
 ## Page Function Heading
