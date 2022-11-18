@@ -3,9 +3,90 @@
     "team": "India",
     "iccRegion": "Asia",
     "coach" : "Rahul Dravid",
-    "captain" : "Virat Kohli",
+    "captain" : "Rohit Sharma",
     "iccRankingT20" : 1,
     "iccRankingOdi" : 3,
-    "iccRankingTest" : 2
+    "iccRankingTest" : 2,
+    "location" : "india",
+    "leagues" : ["ipl"]
+  },
+  {
+    "team": "Australia",
+    "iccRegion": "East Asia-Pacific",
+    "coach" : "Andrew McDonald",
+    "captain" : "Aaron Finch",
+    "iccRankingT20" : 6,
+    "iccRankingOdi" : 5,
+    "iccRankingTest" : 1,
+    "location" : "australia",
+    "leagues" : ["ipl","bbl","psl"]
+  },
+  {
+    "team": "England",
+    "iccRegion": "Europe",
+    "coach" : "Brendon McCullum",
+    "captain" : "Jos Buttler",
+    "iccRankingT20" : 2,
+    "iccRankingOdi" : 1,
+    "iccRankingTest" : 4,
+    "location" : "australia",
+    "leagues" : ["ipl","bbl","psl"]
+  },
+  {
+    "team": "New Zealand",
+    "iccRegion": "East Asia-Pacific",
+    "coach" : "Gary Stead",
+    "captain" : "Kane Williamson",
+    "iccRankingT20" : 5,
+    "iccRankingOdi" : 2,
+    "iccRankingTest" : 5,
+    "location" : "australia",
+    "leagues" : ["ipl","bbl","psl"]
+  },
+  {
+    "team": "Pakistan",
+    "iccRegion": "Asia",
+    "coach" : "Saqlain Mushtaq",
+    "captain" : "Babar Azam",
+    "iccRankingT20" : 3,
+    "iccRankingOdi" : 4,
+    "iccRankingTest" : 6,
+    "location" : "australia",
+    "leagues" : ["bbl","psl"]
+  },
+  {
+    "team": "South Africa",
+    "iccRegion": "Africa",
+    "coach" : "Malibongwe Maketa",
+    "captain" : "Temba Bavuma",
+    "iccRankingT20" : 3,
+    "iccRankingOdi" : 5,
+    "iccRankingTest" : 3,
+    "location" : "australia",
+    "leagues" : ["ipl","bbl","psl"]
+  },
+  {
+    "team": "Srilanka",
+    "iccRegion": "Asia",
+    "coach" : "Dasun Shanaka",
+    "captain" : "Aaron Finch",
+    "iccRankingT20" : 8,
+    "iccRankingOdi" : 8,
+    "iccRankingTest" : 7,
+    "location" : "australia",
+    "leagues" : ["ipl","bbl","psl"]
+  },
+  {
+    "team": "Bangladesh",
+    "iccRegion": "Asia",
+    "coach" : "Russel Domingo",
+    "captain" : "Shakib Al Hasan",
+    "iccRankingT20" : 9,
+    "iccRankingOdi" : 7,
+    "iccRankingTest" : 9,
+    "location" : "australia",
+    "leagues" : ["ipl","bbl","psl"]
   }
+
 ]
+

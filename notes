@@ -237,11 +237,11 @@ Functions:
 2.Format - to format the date to string
 3.Get - to get params for usage of shortcodes
 4.GetPage - returns a page of specified path
-  Page and Site has access to it page relatively find the files
+  Page and Site has access to it, page relatively find the files
 5.HasMenuCurrent - checks whether the children menu entries has been containing the title same as current page
 6.IsMenuCurrent - checks whether the current menu item is same as page title
 7.Param - Param key , order = content fm -> site config
-8.Render - used to render template wherever is needed from the location
+8.Render - used to render template wherever is needed from the required location
 9.RenderString - markdown string to html
 10.Unix - converts date to seconds
 11.absURL - full link with the baseURL
@@ -249,7 +249,8 @@ Functions:
 13.apply - Returns a new slice by applying function to every elements for a collection or slice to passed as args to apply
 14.slice - returns an array by including the params passed
 15.after - returns elements after the speicfied param from an array
-16.anchorize - takes string and format it what default markdown handler doesnt
+16.anchorize - takes string and format it what default markdown handler does
+   eg: heading 2 results in heading-1 which is used for anchor linking the headers
 17.append - append a slice or element to the existing slice
 18.base64 - used to encode and decode
 19.chomp - remove the trailing new lines
@@ -299,4 +300,4 @@ For extended version:
 # <!-- wget https://github.com/gohugoio/hugo/releases/download/v0.94.0/hugo_extended_0.94.0_Linux-64bit.deb
 # sudo dpkg -i hugo_extended_0.94.0_Linux-64bit.deb -->
 
-  
+regex for h2 inner text : "(?<=\<h2>)hello(?=<\/h2>)"

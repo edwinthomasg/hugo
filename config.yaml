@@ -1,7 +1,7 @@
-baseURL: "myweb.com/web"
+baseURL: "myweb.com/go-cricket"
 languageCode: "en-us"
-title: "Movie times"
-theme: "PaperMod"
+title: "Go Cricket"
+theme: ""
 archetypeDir: arch
 refLinksErrorLevel: "WARNING"
 refLinksNotFoundURL: "http://www.google.com"
@@ -11,12 +11,12 @@ truncate: true
 permalinks:
  url-management: /:monthname/:year/:slug
 buildDrafts: true
-relativeURLs: true
 taxonomies:
  tag: tags
  category: categories
  media: medias
  platform: platforms
+ league: leagues
 copyright: © 2022 Movie Times.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
 params:
   developer: edwin
@@ -51,4 +51,4 @@ resources:
 enableEmoji: true
 ignoreErrors: my-custom-error
 enableRobotsTXT: true
-contentDir: cricket
+

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Title}}</title>
+</head>
+<body>
+    {{partial "cricket-header" .}}
+    {{block "list-content" .}}
+    {{end}}
+    {{block "single-content" .}}
+    {{end}}
+</body>
+</html>

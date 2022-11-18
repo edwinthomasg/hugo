@@ -1,0 +1,19 @@
+{{define "list-content"}}
+ {{.Content}}
+ <ul style="margin-left: 20px;">
+    {{range .Pages.ByTitle}}
+    <li><b>{{.Title}}</b></li>
+    <blockquote>
+        {{.Summary}}
+        {{if .Truncated}}
+      To view more
+      <a href="{{.Permalink}}">click here</a>
+    {{end}}
+    </blockquote>
+    {{end}}
+ </ul>
+ <b style="font-size:larger ;">Search by Leagues : </b>
+ {{range $term,$value := .Site.Taxonomies.leagues}}
+   <a href="/leagues/{{$term}}">#{{$term}}</a>
+ {{end}}
+{{end}}

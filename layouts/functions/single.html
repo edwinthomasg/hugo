@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{.Title}}</title>
+  </head>
+  <body>
+    <h1>Function Demo Page :</h1>
+    <hr />
+    <h3>Date Functions:</h3>
+    {{$date := "2022-11-18" | time.AsTime}}
+    <b>Actual Date : {{$date.Format "2006 Jan,02"}}</b>
+    <br />
+    <b>After adding 1 to the day : </b>
+    {{$date.AddDate 0 0 1 | time.Format "02"}}
+    <br />
+    <b>With cardinal numbers and abbreviations :</b>
+    {{$date.Day}} {{if in (slice 1 21 31) $date.Day}} st {{else if in (slice 2
+    22) $date.Day}} nd {{else if in (slice 3 23) $date.Day}} rd {{else}} th
+    {{end}}
+    <hr />
+    <h3>Get Page :</h3>
+    {{$moviePage := .Site.GetPage "movie"}} {{with $moviePage}} {{.GetPage
+    "actress"}} {{end}}
+    <hr />
+    <h2>Taxonomy Terms Ordering :</h2>
+    {{$tags := .Site.GetPage "/platforms"}}
+    <ul>
+      {{range $tags.Data.Terms.ByCount}}
+      <li><a href="">{{.Page.Title}} - {{.Count}}</a></li>
+      {{end}}
+    </ul>
+    <hr>
+    After Usage :
+    {{range first 4 (after 2 (slice 1 2 3 4 5 6 7 8 9 10)) }}
+       {{.}}
+    {{end}}
+    <hr>
+    <a href="{{ anchorize "This is a header"}}"></a>
+    {{os.Getenv "DEPLOY"}}
+  </body>
+</html>

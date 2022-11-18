@@ -1,29 +1,31 @@
-{{define "main"}}
-<p>This is home page with top most priority</p>
-<p>I am going to pull data from data folder</p>
-<br>
-{{$.Site.Data.jazz}}
-<hr>
-<h3>Section pages are listed here</h3>
-{{range (where .Pages "Kind" "section")}}
-  <a href="">{{.Title}}</a> <br>
-{{end}}
-<hr>
-<h3>Drafted pages are listed here</h3>
-{{range where .Pages "Draft" false}}
-  {{range where .Pages "Draft" false}}
-  <a href="">{{.Title}}</a> <br>
-  {{end}}
-{{end}}
-   <h3>Custom Navigation</h3>
-   {{$paginator := (.Paginate (where .Site.Pages "Kind" "section"))}}
-   <ul>
-    {{range $paginator.Pages}}
-    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-  {{end}}
-   </ul>
-   {{partial "pagination" (dict "Paginator" $paginator)}}
-{{end}}
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{.Site.Title}}</title>
+  </head>
+  <body>
+    {{define "main"}}
+    <p>This is home page with top most priority</p>
+    <p>I am going to pull data from data folder</p>
+    <br />
+    {{$.Site.Data.jazz}}
+    <hr />
+    <h3>Section pages are listed here</h3>
+    {{range (where .Pages "Kind" "section")}}
+    <a href="">{{.Title}}</a> <br />
+    {{end}}
+    <hr />
+    <h3>Drafted pages are listed here</h3>
+    {{range where .Pages "Draft" false}} {{range where .Pages "Draft" false}}
+    <a href="">{{.Title}}</a> <br />
+    {{end}} {{end}}
+    <h3>Custom Navigation</h3>
+    {{$paginator := (.Paginate (where .Site.Pages "Kind" "section"))}}
+    <ul>
+      {{range $paginator.Pages}}
+      <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+      {{end}}
+    </ul>
+    {{partial "pagination" (dict "Paginator" $paginator)}} {{end}}
+  </body>
+</html>

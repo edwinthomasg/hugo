@@ -1,0 +1,6 @@
+<h3>Teams Participated in {{.Title | title}} :</h3>
+<ul>
+    {{range .Pages.ByTitle}}
+  <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+{{end}}
+</ul>

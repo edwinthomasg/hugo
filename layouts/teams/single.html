@@ -1,0 +1,20 @@
+{{define "single-content" }}
+  <h2>About : </h2>
+  {{.Content}}
+  <blockquote>
+  {{range where .Site.Data.cricket.teams "team" .Title }}
+    <h3>Icc Region : <span style="font-weight:normal ;">{{.iccRegion}}</span></h3> 
+    <h3>Coach : <span style="font-weight:normal ;">{{.coach}}</span></h3> 
+    <h3>Captain : <span style="font-weight:normal ;">{{.captain}}</span></h3> 
+    <h3>Test Ranking : <span style="font-weight:normal ;">{{.iccRankingTest}}</span></h3> 
+    <h3>Odi Ranking : <span style="font-weight:normal ;">{{.iccRankingOdi}}</span></h3> 
+    <h3>T20 Ranking : <span style="font-weight:normal ;">{{.iccRankingT20}}</span></h3> 
+  {{end}}
+  </blockquote>
+  <b style="font-size: larger ;">Leagues Participating : </b>
+  {{range .Params.leagues }}
+  <a href="/leagues/{{.}}">#{{.}}</a>
+  {{end}}
+  
+  
+{{end}}
